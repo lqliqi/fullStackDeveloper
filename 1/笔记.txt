@@ -1,0 +1,26 @@
+es6 正式诞生于2015.06
+
+浏览器兼容性
+http://kangax.github.io/compat-table/es6/
+http://kangax.github.io/compat-table/es5/
+
+es6(es2015) --- ie10+ chrome ,fireFox ,移动端，nodejs
+
+编译，转换
+
+1，现在转换
+2，提前编译
+
+babel == browser.js
+
+es6
+1，变量
+2，函数
+3，数组
+4，字符串
+5，面向对象
+6，Promise
+7，generator
+8，模块化
+9，
+10，
