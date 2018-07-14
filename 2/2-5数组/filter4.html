@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>filter 过滤</title>
+</head>
+<body>
+<script>
+
+    let arr = [
+        {title: '男士衬衫', price: 100},
+        {title: '女士包包', price: 98650},
+        {title: '男士包', price: 300},
+        {title: '女士鞋子', price: 23900}
+    ];
+
+    let result = arr.filter(json=>json.price > 10000);
+
+    console.log(result);
+
+
+</script>
+</body>
+</html>

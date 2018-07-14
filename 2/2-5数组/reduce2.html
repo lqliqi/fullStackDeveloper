@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>reduce 算平均数</title>
+</head>
+<body>
+<script>
+
+ let arr  = [1,2,3,4];
+
+ let result = arr.reduce(function (tmp,item,index) {
+     if(index !=arr.length-1){
+         return tmp + item;
+     }else{
+         return (tmp + item)/arr.length;
+     }
+ })
+
+alert(result);
+
+</script>
+</body>
+</html>
