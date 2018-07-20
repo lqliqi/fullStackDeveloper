@@ -2,27 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa229ccc-37b7-4796-b122-e49d16257d4a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/2/2-6/endsWidth.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2/2-6/es6.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2/2-6/startsWidth.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2/2-6/startsWidth2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2/2-6/字符串模板.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2/2-7/es6.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2/2-7/plus/browser.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2/2-7/plus/react-dom.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2/2-7/plus/react.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2/2-7/react-组件.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2/2-7/react-组件2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2/2-7/react最基础的.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2/2-7/继承.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2/2-7/继承2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2/2-7/面向对象.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2/2-7/面向对象2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2/2-9/json对象.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2/2-9/json对象2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2/2-9/json简写.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2/2-9/json简写2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -39,11 +19,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="es6.txt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="es6.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/2/2-7/es6.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="262">
               <caret line="142" column="21" selection-start-line="142" selection-start-column="21" selection-end-line="142" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="FIRST">
+              <first_editor>
+                <caret column="16" selection-start-column="16" selection-end-column="16" />
+              </first_editor>
+              <second_editor>
+                <js_state />
+              </second_editor>
             </state>
           </provider>
         </entry>
@@ -81,7 +75,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/2/箭头函数.html" />
         <option value="$PROJECT_DIR$/2/箭头函数2.html" />
         <option value="$PROJECT_DIR$/2/箭头函数3.html" />
         <option value="$PROJECT_DIR$/2/箭头函数4.html" />
@@ -132,6 +125,7 @@
         <option value="$PROJECT_DIR$/2/2-9/json简写.html" />
         <option value="$PROJECT_DIR$/2/2-9/json简写2.html" />
         <option value="$PROJECT_DIR$/2/2-7/es6.txt" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -235,12 +229,12 @@
       <workItem from="1531471716804" duration="2000" />
       <workItem from="1531550782076" duration="7962000" />
       <workItem from="1531894021932" duration="5190000" />
-      <workItem from="1532094549881" duration="3309000" />
+      <workItem from="1532094549881" duration="3472000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21412000" />
+    <option name="totallyTimeSpent" value="21575000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -253,6 +247,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="739" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49919224" visible="true" weight="0.17871326" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32956383" />
@@ -306,13 +301,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/2/2-2函数-箭头函数/圆括号可以省略.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/2/2-2函数-箭头函数/箭头函数4.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -648,6 +636,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="262">
           <caret line="142" column="21" selection-start-line="142" selection-start-column="21" selection-end-line="142" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor>
+            <caret column="16" selection-start-column="16" selection-end-column="16" />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
         </state>
       </provider>
     </entry>
