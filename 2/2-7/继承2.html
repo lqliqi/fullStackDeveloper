@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class User {
+        constructor(name, pass) {
+            this.name = name;
+            this.pass = pass;
+        }
+
+        showName() {
+            alert(this.name);
+        }
+
+        showPass() {
+            alert(this.pass);
+        }
+    }
+
+    // 继承
+    class VipUser extends User {
+        constructor(name, pass, level) {
+            super(name, pass);
+            this.level = level;
+        }
+
+        showLevel() {
+            alert(this.level);
+        }
+    }
+
+
+    var u1 = new VipUser('liming', 123, 6);
+    u1.showName();
+    u1.showPass();
+    u1.showLevel();
+
+</script>
+</body>
+</html>

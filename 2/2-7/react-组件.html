@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="div1">
+
+    </div>
+<script src="./plus/react.js"></script>
+<script src="./plus/react-dom.js"></script>
+<script src="./plus/browser.min.js"></script>
+<script type="text/babel">
+
+    class Test extends React.Component{
+        constructor(...args){
+            super(...args);
+        }
+
+        render(){
+            return <span>hello react 123</span>;
+        }
+    }
+
+    window.onload = function () {
+        let oDiv = document.getElementById('div1');
+        ReactDOM.render(
+           <Test/> ,
+            oDiv
+        )
+    };
+
+</script>
+</body>
+</html>

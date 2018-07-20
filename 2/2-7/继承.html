@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function User(name,pass){
+        this.name = name;
+        this.pass = pass;
+    }
+
+
+    User.prototype.showName = function () {
+        alert(this.name);
+    }
+    User.prototype.showPass = function () {
+        alert(this.pass);
+    }
+
+
+
+    // es 5
+    function VipUser(name,pass,level){
+        User.call(this,name,pass);
+        this.level = level;
+    }
+
+    VipUser.prototype = new User();
+    VipUser.prototype.constructor = VipUser;
+
+    VipUser.prototype.showLevel = function () {
+        alert(this.level);
+    }
+
+    var v1 = new VipUser('li',12345,4);
+    v1.showName();
+    v1.showPass();
+    v1.showLevel();
+
+
+</script>
+</body>
+</html>

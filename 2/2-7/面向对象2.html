@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // es5: 面向对象的特征 ，类首字母大写 , 类 和 构造函数 不区分
+    /*function User(name,pass){
+        this.name = name;
+        this.pass = pass;
+    }
+
+
+    User.prototype.showName = function () {
+        alert(this.name);
+    }
+    User.prototype.showPass = function () {
+        alert(this.pass);
+    }*/
+
+    // es6 面向对象特征 ，1 构造器 和 方法分开；2.方法不用外挂出去
+    class User {
+        constructor(name,pass){
+            this.name = name;
+            this.pass = pass;
+        }
+
+        showName(){
+            alert(this.name);
+        }
+        showPass(){
+            alert(this.pass);
+        }
+    }
+
+    var u1 = new User('liming',123);
+    u1.showName();
+    u1.showPass();
+
+</script>
+</body>
+</html>
