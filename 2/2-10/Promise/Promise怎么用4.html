@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="js/jquery.v3.3.1.js"></script>
+    <script>
+        // jquery.v3.x 以上自带promise
+
+        Promise.all([
+            $.ajax({url: 'data/arr.txt',dataType: 'json'}),
+            $.ajax({url: 'data/json.txt',dataType: 'json'})
+        ]).then(function (results) {
+            let [res1,res2] = results;
+            alert(res1);
+            alert(res2);
+        },function () {
+            alert('失败了');
+        });
+
+    </script>
+</body>
+</html>

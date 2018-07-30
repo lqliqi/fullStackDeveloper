@@ -2,7 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa229ccc-37b7-4796-b122-e49d16257d4a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2/2-10/Promise/Promise怎么用.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2/2-10/Promise/Promise怎么用2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2/2-10/Promise/Promise怎么用3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2/2-10/Promise/Promise怎么用4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2/2-10/Promise/data/arr.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2/2-10/Promise/data/json.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2/2-10/Promise/es6.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2/2-10/Promise/js/jquery.v3.3.1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2/2-11/es6.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2/2-11/generator.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2/2-11/yield到底是个啥.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2/2-11/yield可以传参.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2/2-11/yield可以返回.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,43 +32,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="es6.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/2/2-7/es6.txt">
+      <file leaf-file-name="es6.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/2/2-11/es6.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="142" column="21" selection-start-line="142" selection-start-column="21" selection-end-line="142" selection-end-column="21" />
+            <state relative-caret-position="366">
+              <caret line="242" lean-forward="true" selection-start-line="242" selection-end-line="242" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="30">
-                <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
-              </first_editor>
-              <second_editor>
-                <js_state />
-              </second_editor>
+      <file leaf-file-name="yield可以返回.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/2/2-11/yield可以返回.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" column="36" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="json简写2.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/2/2-9/json简写2.html">
+      <file leaf-file-name="yield到底是个啥.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/2/2-11/yield到底是个啥.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="json对象2.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/2/2-9/json对象2.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+            <state relative-caret-position="300">
+              <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -65,6 +64,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JavaScript File" />
         <option value="HTML File" />
       </list>
     </option>
@@ -75,24 +75,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/2/箭头函数2.html" />
-        <option value="$PROJECT_DIR$/2/箭头函数3.html" />
-        <option value="$PROJECT_DIR$/2/箭头函数4.html" />
-        <option value="$PROJECT_DIR$/2/2-1箭头函数/圆括号可以省略.html" />
-        <option value="$PROJECT_DIR$/2/2-1箭头函数/箭头函数4.html" />
-        <option value="$PROJECT_DIR$/2/2-3函数-参数/参数展开.html" />
-        <option value="$PROJECT_DIR$/2/2-3函数-参数/展开一个数组.html" />
-        <option value="$PROJECT_DIR$/2/2-3函数-参数/展开一个数组2.html" />
-        <option value="$PROJECT_DIR$/2/2-3函数-参数/展开一个数组3.html" />
-        <option value="$PROJECT_DIR$/2/2-3函数-参数/展开一个数组4.html" />
-        <option value="$PROJECT_DIR$/2/2-3函数-参数/默认参数.html" />
-        <option value="$PROJECT_DIR$/2/2-3函数-参数/es6.txt" />
-        <option value="$PROJECT_DIR$/2/2-4结构赋值/结构赋值.html" />
-        <option value="$PROJECT_DIR$/2/2-4结构赋值/结构赋值2.html" />
-        <option value="$PROJECT_DIR$/2/2-4结构赋值/结构赋值3.html" />
-        <option value="$PROJECT_DIR$/2/2-4结构赋值/结构赋值4.html" />
-        <option value="$PROJECT_DIR$/2/2-4结构赋值/注意1.html" />
-        <option value="$PROJECT_DIR$/2/2-4结构赋值/es6.txt" />
         <option value="$PROJECT_DIR$/2/2-4结构赋值/注意2.html" />
         <option value="$PROJECT_DIR$/2/2-4结构赋值/注意3.html" />
         <option value="$PROJECT_DIR$/2/2-5数组/map.html" />
@@ -126,6 +108,24 @@
         <option value="$PROJECT_DIR$/2/2-9/json简写2.html" />
         <option value="$PROJECT_DIR$/2/2-7/es6.txt" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/2/Promise/es6.txt" />
+        <option value="$PROJECT_DIR$/2/Promise/data/att.txt" />
+        <option value="$PROJECT_DIR$/2/Promise/data/arr.txt" />
+        <option value="$PROJECT_DIR$/2/Promise/Promise怎么用.html" />
+        <option value="$PROJECT_DIR$/2/Promise/data/json.txt" />
+        <option value="$PROJECT_DIR$/2/Promise/Promise怎么用2.html" />
+        <option value="$PROJECT_DIR$/2/Promise/Promise怎么用3.html" />
+        <option value="$PROJECT_DIR$/2/2-10/Promise/js/jquery.v3.3.1.js" />
+        <option value="$PROJECT_DIR$/2/2-10/Promise/Promise怎么用.html" />
+        <option value="$PROJECT_DIR$/2/2-10/Promise/Promise怎么用2.html" />
+        <option value="$PROJECT_DIR$/2/2-10/Promise/Promise怎么用3.html" />
+        <option value="$PROJECT_DIR$/2/2-10/Promise/Promise怎么用4.html" />
+        <option value="$PROJECT_DIR$/2/2-10/Promise/es6.txt" />
+        <option value="$PROJECT_DIR$/2/2-11/generator.html" />
+        <option value="$PROJECT_DIR$/2/2-11/yield可以传参.html" />
+        <option value="$PROJECT_DIR$/2/2-11/yield可以返回.html" />
+        <option value="$PROJECT_DIR$/2/2-11/yield到底是个啥.html" />
+        <option value="$PROJECT_DIR$/2/2-11/es6.txt" />
       </list>
     </option>
   </component>
@@ -171,7 +171,7 @@
               <item name="fullStackDeveloper" type="b2602c69:ProjectViewProjectNode" />
               <item name="fullStackDeveloper" type="462c0819:PsiDirectoryNode" />
               <item name="2" type="462c0819:PsiDirectoryNode" />
-              <item name="2-9" type="462c0819:PsiDirectoryNode" />
+              <item name="2-11" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -189,16 +189,18 @@
     <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/2/2-11" />
+      <recent name="$PROJECT_DIR$/2" />
+      <recent name="$PROJECT_DIR$/2/2-10/Promise" />
+      <recent name="$PROJECT_DIR$/2/Promise" />
+      <recent name="$PROJECT_DIR$/2/2-9" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/2/2-10" />
+      <recent name="$PROJECT_DIR$/2/Promise/js" />
       <recent name="$PROJECT_DIR$/2/2-7/plus" />
       <recent name="$PROJECT_DIR$/2/2-1箭头函数" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/2/2-9" />
-      <recent name="$PROJECT_DIR$/2/2-7" />
-      <recent name="$PROJECT_DIR$/2/2-7/plus" />
-      <recent name="$PROJECT_DIR$/2" />
-      <recent name="$PROJECT_DIR$/2/2-6" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -230,11 +232,12 @@
       <workItem from="1531550782076" duration="7962000" />
       <workItem from="1531894021932" duration="5190000" />
       <workItem from="1532094549881" duration="3309000" />
+      <workItem from="1532958253522" duration="6178000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21435000" />
+    <option name="totallyTimeSpent" value="27866000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -260,22 +263,12 @@
       <window_info id="Favorites" order="2" sideWeight="0.50080776" side_tool="true" weight="0.17871326" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49919224" visible="true" weight="0.17871326" />
-      <window_info id="Structure" order="1" sideWeight="0.50080776" side_tool="true" weight="0.17871326" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32956383" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32956383" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32956383" />
-      <window_info id="Favorites" order="2" sideWeight="0.50080776" side_tool="true" weight="0.17871326" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -311,114 +304,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/2/2-2函数-箭头函数/圆括号可以省略.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2/2-2函数-箭头函数/箭头函数4.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2/es6.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2/2-2函数-箭头函数/es6.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2/2-3函数-参数/参数展开.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2/2-3函数-参数/展开一个数组.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2/2-3函数-参数/展开一个数组2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="23" lean-forward="true" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2/2-3函数-参数/展开一个数组3.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2/2-3函数-参数/展开一个数组4.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2/2-3函数-参数/默认参数.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2/2-3函数-参数/es6.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="48" column="35" lean-forward="true" selection-start-line="48" selection-start-column="35" selection-end-line="48" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2/2-4结构赋值/注意3.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2/2-4结构赋值/注意2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2/2-4结构赋值/es6.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2/2-4结构赋值/结构赋值4.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2/2-4结构赋值/注意1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/2/2-5数组/map.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -628,10 +513,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/2/2-9/json对象2.html">
+    <entry file="file://$PROJECT_DIR$/2/2-9/json简写.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+        <state relative-caret-position="165">
+          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="30">
+            <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2/2-7/es6.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="142" column="21" selection-start-line="142" selection-start-column="21" selection-end-line="142" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -642,17 +546,118 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/2/2-9/json简写.html">
+    <entry file="file://$PROJECT_DIR$/2/2-9/json对象2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+        <state relative-caret-position="120">
+          <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/2/2-7/es6.txt">
+    <entry file="file://$PROJECT_DIR$/2/2-10/Promise/data/arr.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="142" column="21" selection-start-line="142" selection-start-column="21" selection-end-line="142" selection-end-column="21" />
+        <state>
+          <caret column="17" selection-start-column="17" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2/2-10/Promise/data/json.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="26" selection-start-column="26" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2/2-10/Promise/js/jquery-1.7.1.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2/2-10/Promise/js/jquery.v3.3.1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="86841" selection-start-line="1" selection-start-column="86841" selection-end-line="1" selection-end-column="86841" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2/2-10/Promise/Promise怎么用.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2/2-10/Promise/Promise怎么用2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2/2-10/Promise/Promise怎么用3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2/2-10/Promise/Promise怎么用4.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="24" lean-forward="true" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2/2-10/Promise/es6.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="213" column="3" lean-forward="true" selection-start-line="213" selection-start-column="3" selection-end-line="213" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2/2-11/Promise/js/jquery.v3.3.1.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2/2-11/generator.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="19" selection-end-line="23" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2/2-11/yield可以传参.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2/2-11/yield可以返回.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="36" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2/2-11/yield到底是个啥.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2/2-11/es6.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="242" lean-forward="true" selection-start-line="242" selection-end-line="242" />
         </state>
       </provider>
     </entry>

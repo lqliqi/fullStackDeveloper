@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 模拟 yield 流程
+    function *炒菜(菜市场买回来的) {
+        洗菜 --> 洗好的菜
+
+        let 干净的菜 = yield 洗好的菜;
+
+        干净的菜 -> 切丝
+
+        let 切好的菜 -> yield 切丝
+
+        切好的菜 --> 炒菜--> 熟的菜
+
+        return 熟的菜;
+    }
+
+</script>
+</body>
+</html>

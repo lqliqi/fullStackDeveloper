@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="js/jquery.v3.3.1.js"></script>
+    <script>
+
+        function createPromise(url) {
+           return new Promise(function (resolve, reject) {
+                $.ajax({
+                    url,
+                    dataType:'json',
+                    success(arr){
+                        resolve(arr);
+                    },
+                    error(arr){
+                        reject(arr);
+                    }
+                })
+            });
+        }
+        Promise.all([
+            createPromise('data/arr.txt'),
+            createPromise('data/json.txt'),
+        ]).then(function(arr){
+            alert('全成功了');
+            let [res1,res2] = arr;
+        },function (arr) {
+            alert('只少有一个失败了');
+            console.log(arr);
+        });
+
+    </script>
+</body>
+</html>

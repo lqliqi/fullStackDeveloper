@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function *show(num1,num2) {
+
+        alert(`${num1},${num2}`);
+
+        alert('a');
+
+        let a = yield ;
+
+
+
+        alert('b');
+        console.log(a);
+
+    }
+
+    let gen = show(88,100);
+    gen.next(12);
+    gen.next(5);
+</script>
+</body>
+</html>

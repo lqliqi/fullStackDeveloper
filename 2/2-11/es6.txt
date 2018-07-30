@@ -1,0 +1,256 @@
+es6 详解
+
+一 ，变量
+var
+1，可以重复声明
+2，无法限制修改
+3，没有块级作用域
+4，只有函数作用域
+
+let 不能重复声明, 变量--> 可以修改,块级作用域
+const 不能重复声明 常量--> 不可修改，块级作用域
+
+
+二，函数--> 箭头函数
+
+function 名字(){
+
+
+}
+
+()=>{
+
+}
+
+1， 如果只有一个参数 () 可以省
+2， 如果只有一个 return {} 可以省
+
+
+函数- 函数参数
+
+1，参数扩展/数组展开
+2，默认参数
+
+
+三，参数扩展
+
+1，收集参数
+function show(a,b,...args){};
+* Rest Parameter (args) 必须是最后一个
+
+2,展开数组
+...arr  =>  1,2,3
+展开后的效果就是跟直接把数组的内容写在这一样
+
+
+---------------------------------------------------
+
+默认参数
+$('#div').animate({width:'200px'});
+$('#div').animate({width:'200px'},1000);
+
+
+
+四，结构赋值
+
+1,左右两边结构必须一样
+2，右边必须是个东西
+3，声明和赋值不能分开(必须在一句话里面完成)
+
+let [a,b,c] = [12,5,8];
+
+let {a,b,c} = {a:4,b:5,c:6};
+
+
+五，数组
+
+map         映射               一个对一个
+
+[33,60,80,90]
+['不及格','及格','良好','优秀'];
+
+[45,57,135,38]
+[
+{name:'张三',level:0,role:0}
+{name:'李四',level:1,role:4}
+{name:'王五',level:2,role:5}
+{name:'赵六',level:3,role:7}
+
+
+]
+
+
+reduce      汇总               一堆出来一个
+
+    算个总数
+        [5,8,10]   ===>  23;
+
+
+    算个平均数
+        [12,59,99]  ====> 56.67
+
+
+
+filter      过滤器
+forEach     循环(迭代)
+
+
+六，字符串
+1，多了两个方法
+startsWidth
+endsWidth
+
+2，字符串模板
+   字符串连接
+
+   优点： 直接把东西塞进字符串中  ${东西}
+         可以折行
+
+
+
+
+七，面向对象
+1，class 关键字，构造器和 类(方法)分开了
+2，class 里面直接加方法
+
+面向对象 最大特点：
+
+继承：
+
+super --- 超类 == 父类
+
+
+面向对象应用 ---React
+
+React
+1,组件化 --- class
+2,JSX
+
+JSX == babel == browser.js
+
+---------
+
+八 JSON
+    JSON.stringify()
+    JSON.parse()
+
+1，json对象
+2，简写
+    名字和值(key 和 value ) 一样 ，  留一个就行
+    方法     :function 一块删
+
+           show:function(){...}
+           show(){...}
+
+json 的标准写法
+1，只能用双引号
+2，所有的名字都必须用引号包起来
+
+{a:1,b:2,c:3}   x
+{"a":1,"b":2,"c":3}   √
+
+{a:'abc',b:'bc'}  x
+{"a":"ab","b":5}  √
+
+
+九 Promise
+异步：操作之间没啥关系，同时进行多个操作
+同步：同事只能做一件事
+
+异步：代码更复杂
+同步：代码简单
+
+Promise --- 消除异步操作
+* 用同步的方式，来书写异步代码
+
+Promise 到底怎么用
+    Promise.all()
+    Promise.race()  // 竞速
+
+// 之前异步
+$.ajax({url:'data/1.json',dataType:'json',success(){
+     // 成功
+     $.ajax({url:'data/1.json',dataType:'json',success(){
+          // 成功
+          $.ajax({url:'data/1.json',dataType:'json',success(){
+               // 成功
+                $.ajax({url:'data/1.json',dataType:'json',success(){
+                     // 成功
+
+                }})
+          }})
+     }})
+}})
+
+
+// 有了 Promise 之后的 异步
+
+Promise.all([
+
+$.ajax({url:'data/1.json',dataType:'json'}),
+$.ajax({url:'data/2.json',dataType:'json'}),
+
+]).then(results=>{
+    // 对了
+},err=>{
+    // 错了
+});
+
+同步：
+
+let banner_data = ajax_async('/banners');
+let hotitem_data = ajax_async('/hotitem');
+let slider_data = ajax_async('/slider');
+let banner_data = ajax_async('/banners');
+
+
+         
+-----------------------------------------------
+
+Promise.race([
+    $.ajax({url:'data/arr.txt',}),
+    $.ajax({url:'data/arr.txt',}),
+    $.ajax({url:'data/arr.txt',}),
+    $.ajax({url:'data/arr.txt',}),
+])
+
+
+
+
+十 generator
+
+    generator - 生成器
+    generat  -- 生成
+
+------------------------------------------------------------------------------------------
+
+
+普通函数--- 一路到底
+
+generator --- 中间能停
+
+
+------------------------------------------------------------------------------------------
+
+
+generator 特点： 踹一步，走一步
+
+适应场景
+
+yield 传参
+yield 返回
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
