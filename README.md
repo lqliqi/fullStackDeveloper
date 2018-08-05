@@ -49,7 +49,7 @@ linux
 npm i -g n
  n: 升级 node 本身
 
- 
+
 
 
 

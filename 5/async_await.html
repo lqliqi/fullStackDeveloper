@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="js/jquery.v3.3.1.js"></script>
+<script>
+    /*(async function () {
+
+          let arr = await $.ajax({url:'data/arr.txt',dataType:'json'});
+          console.log('已经收到数组： '+ arr);
+
+          let json = await $.ajax({url:'data/json.txt',dataType:'json'});
+          console.log('已经收到json： ', json);
+
+          console.log('接收完成');
+
+    })()*/
+
+
+    // async 可以使用箭头函数
+
+    (async () =>  {
+
+        let arr = await $.ajax({url:'data/arr.txt',dataType:'json'});
+        console.log('已经收到数组： '+ arr);
+
+        let json = await $.ajax({url:'data/json.txt',dataType:'json'});
+        console.log('已经收到json： ', json);
+
+        console.log('接收完成');
+
+    })()
+
+</script>
+</body>
+</html>
