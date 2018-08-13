@@ -1,0 +1,37 @@
+<wxs module="util" src="../../utils/util.wxs" />
+<view class='main'>
+  <image src='{{util.HTTP + item.thumb_img}}'></image>
+  <view>
+    <view class='title'>
+      满意度评价
+      <view class='star'>
+        <image bindtap='oneStar' src="{{star_num >= 1?'/images/pingjiawancheng.png':'/images/smile.png'}}"></image>
+        <image bindtap='twoStar' src="{{star_num >= 2?'/images/pingjiawancheng.png':'/images/smile.png'}}"></image>
+        <image bindtap='threeStar' src="{{star_num >= 3?'/images/pingjiawancheng.png':'/images/smile.png'}}"></image>
+        <image bindtap='fourStar' src="{{star_num >= 4?'/images/pingjiawancheng.png':'/images/smile.png'}}"></image>
+        <image bindtap='fiveStar' src="{{star_num >= 5?'/images/pingjiawancheng.png':'/images/smile.png'}}"></image>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='center'>
+  <textarea placeholder='亲!留下你的评价吧~' bindinput='messageInput'></textarea>
+</view>
+
+<view>
+  <view class='jt'>添加截图</view>
+  <view class='voucher'>
+    <view class='photo' wx:for="{{photos}}">
+      <image src='{{item}}'></image>
+      <image class='delete' src='/images/photo_delete.png' bindtap='delete' data-index='{{index}}'></image>
+    </view>
+    <view class='photo' bindtap='choose_photo' hidden='{{photos.length==6}}'>
+      <image src='/images/pl-tupian.png'></image>
+    </view>
+  </view>
+</view>
+
+<view class='footer'>
+  <view class='evaluate' bindtap='evaluate'>评价</view>
+</view>

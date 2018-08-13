@@ -1,0 +1,36 @@
+<wxs module="util" src="../../utils/util.wxs" />
+<view style='background: #F6F6F6'>
+  <view hidden='{{loading}}'>
+    <loading>
+      加载中...
+    </loading>
+  </view>
+  <!--左侧导航栏  -->
+  <view class='tab'>
+    <view class='tablist'>
+      <view>
+
+        <view id="tab_title" wx:for="{{classify}}" wx:for-index="idx" wx:for-item="itemName" data-idx="{{idx}}" bindtap='switchTab' class="{{currentNavtab==idx?'cur':''}}">
+          <text>{{itemName.title}}</text>
+        </view>
+      </view>
+    </view>
+    <view class='tabcon'>
+      <view wx:for="{{data}}">
+        <view style="padding-top: 2%;">
+          <view class='title'>
+            <text class='note'>{{item.title}}</text>
+          </view>
+        </view>
+        <view class='r_classify'>
+          <view wx:for="{{item.classify}}">
+            <navigator  hover-class='none' url='../cotegory/cotegory?class_id={{item.id}}'>
+              <image style='width:65px;height:65px;margin:0 auto;display:block;' src='{{util.HTTP + item.picUrl}}'></image>
+              <text>{{item.title}}</text>
+            </navigator>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

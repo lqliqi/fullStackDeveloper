@@ -1,0 +1,10 @@
+<view class='wrap-hot-sale'>
+  <view class='center'>
+    <view wx:for="{{hot_list}}" bindtap='click' data-item='{{item}}'>
+      <view class='title'>
+        <text>{{item.title}}</text>
+        <image src='/images/next.png'></image>
+      </view>
+    </view>
+  </view>
+</view>

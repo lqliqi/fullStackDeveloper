@@ -1,0 +1,32 @@
+.page{
+    padding-top: 10rpx;
+}
+
+.information-tit{
+    font-size: 30rpx;
+    color: #000;
+    padding-left: 39rpx;
+    line-height: 39rpx;
+    margin-bottom: 34rpx; 
+    font-family:cursive;
+}
+.information-tit::before{
+    display: block;
+    content: '';
+    width: 6rpx;
+    height: 39rpx;
+    float: left;
+    background-color: #F7982A;
+    margin-right: 8rpx;
+}
+.information-content{
+    font-size: 24rpx;
+    padding-left: 24rpx;
+    padding-right: 24rpx;
+    line-height: 1.4;
+}
+
+.information-content-line{
+    text-indent: 42rpx;
+    margin-bottom: 20rpx;
+}

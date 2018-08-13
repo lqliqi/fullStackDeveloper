@@ -1,0 +1,65 @@
+<wxs module="util" src="../../utils/util.wxs" />
+<view class='board' hidden='{{!choose_size}}'></view>
+
+<view class='combo_list'>
+  <view class='center' wx:for="{{combo.data}}">
+    <image src='{{util.HTTP + item.thumb_img}}'></image>
+    <view class='right'>
+      <view class='title'>{{item.title}}</view>
+      <view class='size'>
+        <view bindtap='chooseSize' data-item='{{item}}' hidden='{{item.attr == null}}'>
+          {{item.attr}}
+          <image src='/images/down2.png'></image>
+        </view>
+        <text>x1</text>
+      </view>
+      <view class='price'>¥{{item.price}}</view>
+    </view>
+  </view>
+</view>
+
+<view class='footer'>
+  <view class='total'>
+    合计:
+    <text>¥{{combo.combo.total}}</text>
+  </view>
+  <view class='buy'>
+    <text>优惠价:¥{{combo.combo.combo_price}}</text>
+    <text class='buynow' bindtap='buynow'>立即购买</text>
+  </view>
+</view>
+
+<view class='spsx' hidden='{{!choose_size}}'>
+  <view class='sp'>
+    <image src='{{util.HTTP + detail.thumb_img}}'></image>
+    <view class='title_bg'>
+      <view class='title'>{{detail.title}}</view>
+      <view class='specification'>
+        <text>已选 {{size}}</text>
+        <view class='price'>¥{{detail.price}}</view>
+      </view>
+    </view>
+  </view>
+  <view class='size' wx:for="{{detail.goods_attr}}" wx:for-index="idx">
+    <view class='size_title'>{{item.title}}</view>
+    <view class='size_list'>
+      <view wx:for="{{item.list}}" bindtap='choose' data-data='{{item}}' data-index='{{idx}}' class="{{size_array[idx]==item?'cur':''}}">
+        {{item}}
+      </view>
+    </view>
+  </view>
+  <!-- <view class='num'>
+    <view>
+      <text>数量</text>
+    </view>
+    <view class='num_border'>
+      <view class='border' bindtap='quantity_reduce'>-</view>
+      <view class='border_double'>{{quantity}}</view>
+      <view class='border' bindtap='quantity_increase'>+</view>
+    </view>
+  </view> -->
+  <view class='footer1'>
+    <view class='ljgm' bindtap='confirm'>确定</view>
+  </view>
+  <image src='/images/cancel.png' class='cancel' bindtap='close'></image>
+</view>

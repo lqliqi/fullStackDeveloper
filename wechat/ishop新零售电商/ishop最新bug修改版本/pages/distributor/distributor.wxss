@@ -1,0 +1,131 @@
+page {
+  background: #f6f6f6;
+}
+
+.wrap {
+  width: 100%;
+  height: auto;
+  background-color: #f6f6f6;
+}
+
+.empty {
+  margin-top: 30%;
+  text-align: center;
+  font-size: 34rpx;
+}
+
+.empty image {
+  width: 356rpx;
+  height: 328rpx;
+}
+
+.top-tab {
+  width: 100%;
+  height: 90rpx;
+  background: #fff;
+  color: #e73c0a;
+  font-size: 28rpx;
+  line-height: 90rpx;
+  margin: 0 0 8rpx 0;
+  z-index: 9999;
+}
+
+.toptab {
+  width: 50%;
+  float: left;
+  text-align: center;
+  color: #212121;
+  position: relative;
+}
+
+.toptab.active {
+  color: #e73c0a;
+}
+
+.toptab.active::after {
+  content: '';
+  width: 100rpx;
+  height: 4rpx;
+  background: #e73c0a;
+  position: absolute;
+  right: 50%;
+  margin-right: -50rpx;
+  bottom: 0rpx;
+}
+
+.main {
+  /* background: white; */
+  margin-bottom: 2%;
+  margin-top: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.center {
+  width: 94%;
+  margin: 0 auto;
+}
+
+.center .main .left {
+  width: 28%;
+  text-align: center;
+  float: left;
+  padding: 16rpx 3% 12rpx;
+  position: relative;
+  z-index: 2;
+}
+
+.center .main .left::after {
+  position: absolute;
+  content: '';
+  width: 2rpx;
+  height: 100%;
+  right: 0;
+  top: 0;
+  border-right: 2rpx dashed #f6f6f6;
+}
+
+.center .main .left image {
+  width: 128rpx;
+  height: 128rpx;
+  border: 10rpx solid #f6f6f6;
+  border-radius: 80rpx;
+  display: block;
+  margin: 0 auto;
+}
+
+.center .main .left text {
+  font-size: 24rpx;
+  overflow: hidden;
+  width: 180rpx;
+  margin: 0 auto;
+  height: 40rpx;
+  word-wrap: break-word;
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.center .main .right {
+  width: 66%;
+  padding: 22rpx 0;
+  float: left;
+  position: relative;
+  z-index: 2;
+}
+
+.center .main .right .content {
+  font-size: 24rpx;
+  line-height: 2.5;
+  margin-left: 5%;
+}
+
+.main_bg {
+  display: block;
+  width: 100%;
+  height: 224rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}

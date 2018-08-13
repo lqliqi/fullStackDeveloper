@@ -1,0 +1,161 @@
+page {
+  background: #f6f6f6;
+}
+
+.wrap {
+  width: 100%;
+  height: auto;
+  background-color: #f6f6f6;
+}
+
+.top-tab {
+  width: 100%;
+  height: 90rpx;
+  background: #fff;
+  color: #e73c0a;
+  font-size: 28rpx;
+  line-height: 90rpx;
+  margin: 0 0 8rpx 0;
+  z-index: 9999;
+  margin-top:2rpx;
+
+}
+
+.toptab {
+  width: 33%;
+  float: left;
+  text-align: center;
+  color: #212121;
+}
+
+.toptab text {
+  position: relative;
+  display: inline-block;
+}
+
+.toptab.active text {
+  color: #e73c0a;
+}
+
+.toptab.active text::after {
+  content: '';
+  width: 100%;
+  height: 4rpx;
+  background: #e73c0a;
+  position: absolute;
+  left: 0rpx;
+  bottom: 0rpx;
+}
+
+.center {
+  width: 94%;
+  padding: 0 3%;
+}
+
+.main {
+  margin-top: 3%;
+  overflow: hidden;
+  position: relative;
+}
+
+.main image {
+  width: 100%;
+  height: 244rpx;
+}
+
+.main .left {
+  width: 35%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  margin-top: -37rpx;
+  left: 0;
+}
+
+.get {
+  font-size: 32rpx;
+  line-height: 80rpx;
+  color: #e73c0a;
+}
+
+.main .price {
+  font-size: 32rpx;
+  color: #bfbfbf;
+}
+
+.main .price text {
+  font-size: 56rpx;
+}
+
+.main .right {
+  width: 50%;
+  top:50%;
+left:35%;
+position:absolute;
+margin-top:-88rpx;
+
+}
+
+.main .right .dress {
+  color: #bfbfbf;
+  font-size: 32rpx;
+  line-height: 1.5;
+}
+
+.main .right .num {
+  color: #bfbfbf;
+  font-size: 28rpx;
+  line-height: 3;
+}
+
+.main .right .use {
+  color: #bfbfbf;
+  font-size: 26rpx;
+  line-height: 2.7;
+  overflow: hidden;
+}
+
+.main .right .use text {
+  float: left;
+  white-space: pre;
+}
+
+.main .right .use image {
+  width: 22rpx;
+  height: 14rpx;
+  float: left;
+  margin-top: 30rpx;
+  margin-left: 10rpx;
+}
+
+.center .tips {
+  width: 94%;
+  margin: 0px auto;
+  background: white;
+  font-size: 26rpx;
+  line-height: 40rpx;
+  padding: 2%;
+}
+
+.none {
+  display: none;
+}
+
+.yellow {
+  color: #e73c0a !important;
+}
+
+.empty {
+  margin-top: 30%;
+  text-align: center;
+  font-size: 34rpx;
+}
+
+.empty image {
+  width: 356rpx;
+  height: 328rpx;
+}
+
+.rotate{
+  transform: rotate(180deg)
+}

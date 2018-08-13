@@ -1,0 +1,63 @@
+page {
+  background: #f6f6f6;
+}
+
+.content {
+  background: white;
+  padding-bottom: 30rpx;
+}
+
+.title {
+  font-size: 28rpx;
+  line-height: 84rpx;
+  margin-left: 3%;
+}
+
+.content input {
+  width: 90%;
+  margin: 0px auto;
+  display: block;
+  font-size: 28rpx;
+  line-height: 2;
+  border-radius: 8rpx;
+  border: 2rpx solid #cbcbcb;
+  padding-left: 30rpx;
+}
+
+.choose {
+  position: relative;
+}
+
+.picker {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.picker  view {
+  width: 100%;
+  height: 56rpx;
+  min-height: 56rpx;
+  z-index: 9999;
+  display: inline-block;
+}
+
+.commit {
+  position: fixed;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  bottom: 30rpx;
+  border-radius: 8rpx;
+  background: #e73c0a;
+  color: white;
+  font-size: 30rpx;
+  height: 90rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

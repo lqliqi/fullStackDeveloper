@@ -1,0 +1,16 @@
+<wxs module="util" src="../../utils/util.wxs" />
+<view class='wrap-rmsc'>
+  <loading hidden="{{hidden}}">
+    加载中...
+  </loading>
+  <view class='center'>
+    <view class='type'>
+      <view wx:for="{{market_type}}">
+        <navigator hover-class='none' url='../hot_market_detail/hot_market_detail?id={{item.id}}&title={{item.title}}'>
+          <image src='{{util.HTTP + item.picUrl}}'></image>
+          <view>{{item.title}}</view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,138 @@
+.wrap-rew {
+  width: 100%;
+  height: auto;
+  background: #f6f6f6;
+}
+
+.wrap-rew .tablist {
+  width: 100%;
+  background: white;
+  overflow: hidden;
+}
+
+.wrap-rew .tablist > view {
+  width: 100%;
+  height: auto;
+  float: left;
+  overflow: hidden;
+  background: white;
+  padding-bottom: 16rpx;
+}
+
+.wrap-rew .tablist .level {
+  width: 22%;
+  margin-left: 2%;
+  float: left;
+  text-align: center;
+  font-size: 24rpx;
+  border: 2rpx solid #f39d84;
+  border-radius: 8rpx;
+  line-height: 56rpx;
+  margin-top: 16rpx;
+  background: #fdf5f3;
+}
+
+.level text {
+  text-align: center;
+  font-size: 24rpx;
+  line-height: 56rpx;
+}
+
+
+.wrap-rew .tabcon {
+  background: white;
+}
+
+.review {
+  width: 94%;
+  padding: 2% 3%;
+  border-bottom: 2rpx solid #f6f6f6;
+  background: white;
+}
+
+.review .title {
+  height: 84rpx;
+  overflow: hidden;
+}
+
+.review .title > image {
+  display: block;
+  float: left;
+  width: 84rpx;
+  border-radius: 100%;
+  height: 84rpx;
+}
+
+.review .title text {
+  /* float: left; */
+  font-size: 24rpx;
+  line-height: 44rpx;
+  display: block;
+
+}
+
+.review .title .star {
+  /* float: right; */
+   margin-top: 8rpx; 
+  overflow: hidden;
+}
+
+.review .title .star image {
+  width: 22rpx;
+  height: 22rpx;
+  display: block;
+  float: left;
+}
+
+.content {
+  /* width: 100%; */
+  font-size: 24rpx;
+  line-height: 1.5;
+  padding: 1.5% 0;
+  margin-left: 104rpx;
+}
+
+.review .reply {
+  /* width: 100%; */
+  font-size: 24rpx;
+  line-height: 2;
+  margin-left: 104rpx;
+}
+
+.review .reply > view {
+  color: #a8a8a8;
+}
+
+.review .pic {
+  /* width: 100%; */
+  overflow: hidden;
+  margin-left: 94rpx;
+}
+
+.review .pic > view {
+  width: 32%;
+  float: left;
+  margin-left: 2%;
+  text-align: center;
+}
+.review .pic > view :first-child{
+  margin-left: 0;
+}
+.pic image {
+  width: 100%;
+  height: 160rpx;
+}
+.cur {
+  color: #e73f09;
+  background: #fff!important;
+}
+.title .det{
+  float: left;
+  margin-left: 20rpx;
+}
+.review .title .time{
+  font-size: 28rpx;
+  line-height: 84rpx;
+  float: right;
+  color: #999;
+}

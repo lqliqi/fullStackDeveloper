@@ -1,0 +1,73 @@
+<wxs module="util" src="../../utils/util.wxs" />
+<view class="wrap-sale">
+  <loading hidden="{{hidden}}">
+    加载中...
+  </loading>
+  <view class='limit_list'>
+    <view>
+      <view class="time {{currentNavtab==idx?'cur':''}}" wx:for="{{flash_sale_time}}" wx:for-index="idx" data-idx='{{idx}}' bindtap="switchTab" data-type='{{item.id}}'>
+        {{item.name}}
+        <text wx:if="{{idx==0}}">抢购中</text>
+        <text wx:else>即将开场</text>
+      </view>
+    </view>
+  </view>
+
+  <view class='flash_info'>
+    <text>{{block}}</text>
+    <view class='right'>
+      <text>{{time_content}}</text>
+      <view class='time'>
+        <block wx:if="{{h>=10}}">
+          <text>{{h}}</text>:</block>
+        <block wx:else>
+          <text>0{{h}}</text>:</block>
+        <block wx:if="{{m>=10}}">
+          <text>{{m}}</text>:</block>
+        <block wx:else>
+          <text>0{{m}}</text>:</block>
+        <block wx:if="{{s>=10}}">
+          <text>{{s}}</text>
+        </block>
+        <block wx:else>
+          <text>0{{s}}</text>
+        </block>
+      </view>
+    </view>
+  </view>
+
+
+  <view class='empty' hidden='{{flash_sale_good.length!=0}}'>
+    <image src='/images/empty_iv_2.png'></image>
+    <view>暂无商品</view>
+  </view>
+
+  <view class='limit_con'>
+    <view wx:for="{{flash_sale_good}}" data-id='{{item.id}}' bindtap='go_rush'>
+      <view class='content'>
+        <image src='{{util.HTTP + item.thumb_img}}'></image>
+        <view class='goods_det'>
+          <text class='title'>{{item.title}}</text>
+          <view>
+            <view class='price'>
+              ¥{{item.price}}
+              <text>¥{{item.goods_price}}</text>
+            </view>
+            <view class='ope'>
+              <view hidden='{{start}}' class='not_go'>即将开始</view>
+              <view hidden='{{!start}}'>
+                <view class='go'>立即抢购</view>
+                <view class='per'>
+                  已售{{item.purchase_number/item.number*100}}%
+                  <view style='display:inline-block;width:140rpx;height:10rpx;border-radius:12rpx;overflow:hidden;border:2rpx solid #e73f09'>
+                    <progress backgroundColor="#fff" activeColor="#e73f09" percent="{{item.purchase_number/item.number}}"></progress>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

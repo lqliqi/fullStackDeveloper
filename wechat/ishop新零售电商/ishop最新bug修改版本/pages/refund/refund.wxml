@@ -1,0 +1,13 @@
+<view class='content'>
+  <view class='title'>快递公司</view>
+  <view class='choose'>
+    <input placeholder='请选择物流公司' disabled='false' value='{{logistics_company}}'></input>
+    <picker class='picker' bindchange="bindPickerChange" value="{{index}}" range="{{array}}" range-key="name">
+      <view></view>
+    </picker>
+  </view>
+  <view class='title'>快递单号</view>
+  <input placeholder='请输入快递单号' type='number' bindinput='numberInput'></input>
+</view>
+
+<view class='commit' bindtap='commit'>提交退货物流信息</view>

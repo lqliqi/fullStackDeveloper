@@ -1,0 +1,64 @@
+page {
+  background: #f6f6f6;
+}
+
+.content {
+  margin-top: 2rpx;
+  background: white;
+}
+
+.media {
+  margin: 0 auto;
+  padding: 20rpx 3%;
+  border-bottom: 2rpx solid #f6f6f6;
+  position: relative;
+}
+
+.media image {
+  position: absolute;
+  width: 72rpx;
+  height: 72rpx;
+}
+
+.media > navigator > view {
+  width: 75%;
+  height: 90rpx;
+  padding-left: 15%;
+}
+
+.title {
+  font-size: 28rpx;
+  line-height: 40rpx;
+  color: #212121;
+  display: inline-block;
+  max-width: 400rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.context {
+  font-size: 26rpx;
+  line-height: 36rpx;
+  color: #999;
+  max-width: 400rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-top: 10rpx;
+}
+
+.tit {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.time {
+  position: absolute;
+  color: #b6b6b6;
+  font-size: 24rpx;
+  top: 50%;
+  margin-top: -12rpx;
+  right: 30rpx;
+}

@@ -1,0 +1,54 @@
+<wxs module="util" src="../../utils/util.wxs" />
+<view class="wrap-rew">
+  <loading hidden="{{hidden}}">
+    加载中...
+  </loading>
+  <view class='tablist'>
+    <view>
+      <view class="level {{current_level==1?'cur':''}}" bindtap='all_level'>
+        <text><text hidden='{{current_level!=1}}'>✔</text>全部 {{statistics.all_count}}</text>
+      </view>
+      <view class="level {{current_level==2?'cur':''}}" bindtap='good_level'>
+        <text><text hidden='{{current_level!=2}}'>✔</text>好评 {{statistics.good_count}}</text>
+      </view>
+      <view class="level {{current_level==3?'cur':''}}" bindtap='center_level'>
+        <text><text hidden='{{current_level!=3}}'>✔</text>中评 {{statistics.centre_count}}</text>
+      </view>
+      <view class="level {{current_level==4?'cur':''}}" bindtap='bad_level'>
+        <text><text hidden='{{current_level!=4}}'>✔</text>差评 {{statistics.bad_count}}</text>
+      </view>
+      <view class="level {{current_level==5?'cur':''}}" bindtap='img_level'>
+        <text><text hidden='{{current_level!=5}}'>✔</text>有图 {{statistics.img_count}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='tabcon'>
+    <view class='review' wx:for="{{evaluate_list}}">
+      <view class='title'>
+        <image src='{{util.HTTP + item.avatar}}'></image>
+        <view class='det'>
+          <text>{{item.nickname}}</text>
+          <view>
+            <view class='star'>
+              <image src="{{item.grade >=1 ? '/images/evaluate_start_on.png':'/images/evaluate_start_off.png'}}"></image>
+              <image src="{{item.grade >=2 ? '/images/evaluate_start_on.png':'/images/evaluate_start_off.png'}}"></image>
+              <image src="{{item.grade >=3 ? '/images/evaluate_start_on.png':'/images/evaluate_start_off.png'}}"></image>
+              <image src="{{item.grade >=4 ? '/images/evaluate_start_on.png':'/images/evaluate_start_off.png'}}"></image>
+              <image src="{{item.grade >=5 ? '/images/evaluate_start_on.png':'/images/evaluate_start_off.png'}}"></image>
+            </view>
+          </view>
+        </view>
+        <text class='time'>{{item.create_time}} </text>
+      </view>
+      <view class='content'>{{item.content}}</view>
+      <view class='pic'>
+        <view wx:for="{{item.picArr}}">
+          <image src='{{util.HTTP + item.path}}'></image>
+        </view>
+      </view>
+      <view class='reply'>
+        <view>属性规格: {{item.attr}}</view>
+      </view>
+    </view>
+  </view>
+</view>

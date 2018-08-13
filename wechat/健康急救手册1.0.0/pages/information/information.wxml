@@ -1,0 +1,11 @@
+<view class="page">
+    <block wx:for="{{text}}" wx:for-index='myid' wx:for-item='myitem'>
+        <view class="information-tit">{{myitem.tit}}</view>
+        <view class="information-content">
+            <view class="information-content-line" wx:for="{{myitem.content}}" wx:for-item="contentitem">
+                {{contentitem}}
+            </view>
+        </view>
+    </block>
+    
+</view>

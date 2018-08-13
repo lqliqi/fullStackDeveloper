@@ -1,0 +1,115 @@
+page {
+  background: #f6f6f6;
+}
+
+.main {
+  overflow: hidden;
+  background: white;
+}
+
+.main > image {
+  float: left;
+  width: 28%;
+  height: 188rpx;
+  padding: 1%;
+}
+
+.main > view {
+  width: 66%;
+  float: left;
+  margin-left: 20rpx;
+}
+
+.main .title {
+  font-size: 28rpx;
+  line-height: 100rpx;
+  margin-top: 20rpx;
+}
+
+.main .star {
+  overflow: hidden;
+}
+
+.star > image {
+  width: 44rpx;
+  height: 44rpx;
+  float: left;
+  margin-right: 10rpx;
+}
+
+.center {
+  width: 100%;
+  height: auto;
+  background: white;
+  margin-top: 1%;
+}
+
+.center textarea {
+  height: 300rpx;
+  resize: none;
+  width: 94%;
+  margin-left: 3%;
+  padding-top: 3%;
+  display: block;
+  border: none;
+  font-size: 28rpx;
+}
+
+.jt {
+  font-size: 28rpx;
+  line-height: 3;
+  margin-left: 3%;
+}
+
+.voucher {
+  background: white;
+  width: 94%;
+  padding: 2% 3%;
+  overflow: hidden;
+}
+
+.voucher .photo {
+  float: left;
+  margin-right: 20rpx;
+}
+
+.voucher .photo image {
+  height: 160rpx;
+  width: 160rpx;
+  margin-bottom: 10rpx;
+  position: relative;
+  z-index: 1;
+}
+
+.photo .delete {
+  width: 40rpx !important;
+  height: 40rpx !important;
+  float: right;
+  margin-top: -10rpx;
+  position: absolute;
+  margin-left: -20rpx;
+}
+
+.footer {
+  position: fixed;
+  background: white;
+  width: 100%;
+  height: 90rpx;
+  bottom: 0;
+  border-top: 1px solid #f3f3f3;
+}
+
+.evaluate {
+  width: 160rpx;
+  color: #e73f09;
+  float: right;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 30rpx;
+  border: 2rpx solid #e73f09;
+  border-radius: 8rpx;
+  margin-top: 13rpx;
+}

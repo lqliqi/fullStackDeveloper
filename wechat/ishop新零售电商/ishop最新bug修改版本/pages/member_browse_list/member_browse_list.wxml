@@ -1,0 +1,47 @@
+<wxs module="util" src="../../utils/util.wxs" />
+<view class="wrap">
+
+  <view class="cart_head">
+    <button class="ope" bindtap='edit' hidden='{{browse_list.length==0}}'>{{edit?'编辑':'完成'}}</button>
+  </view>
+
+  <view class='empty' hidden='{{browse_list.length!=0}}'>
+    <image src='/images/empty_iv_3.png'></image>
+    <view>暂无浏览记录</view>
+    <view>快去浏览自己喜欢的商品吧</view>
+  </view>
+
+  <view class='content' style="{{!edit?'padding-bottom:70rpx;':''}}">
+    <view wx:for="{{browse_list}}">
+      <view class='time'>{{item.date}}</view>
+      <view class='tc' style="{{!edit?'padding-left:60rpx;':''}}" wx:for="{{item.list}}" bindtap='click' data-goods_id='{{item.goods_id}}' data-id='{{item.id}}'>
+        <view class='select' hidden="{{edit}}">
+          <image src="{{item.check?'/images/zffs_on.png':'/images/zfsh_off.png'}}"> </image>
+        </view>
+        <view class='tc1'>
+          <view class='center'>
+            <view class='good'>
+              <image src='{{util.HTTP + item.thumb_img}}'></image>
+              <view class='det'>
+                <text class='title'>{{item.title}}</text>
+                <view class='price'>
+                  <view>¥{{item.price}}</view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='footer' hidden='{{edit}}'>
+    <view class='all'>
+      <view class='choose' bindtap='select_all'>
+        <image src="{{is_all?'/images/zffs_on.png':'/images/zfsh_off.png'}}"></image>
+        <text>全选</text>
+      </view>
+      <view class='total' bindtap='delete'>删除</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,66 @@
+<wxs module="util" src="../../utils/util.wxs" />
+<view class='wrap-shop'>
+  <view bindtap='clickBanner' class='header'>
+    <view class="tips">
+      <image src='https://app76.app.longcai.net/static/mobile/img-new/new-bg1.png'></image>
+      <view class="info">
+        <view>{{device.title}}</view>
+        {{device.balance}}
+      </view>
+    </view>
+    <view class='title'>
+      <image src='https://app76.app.longcai.net/static/mobile/img-new/new_icon9.png'></image>
+      <text>{{device.text}}</text>
+      <button class='get_phone' hover-class='none' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber"></button>
+    </view>
+  </view>
+
+  <view class='list_group'>
+    <navigator hover-class='none' url='../commission/commission'>
+      <view class='list'>
+        <image src='/images/new_icon5.png'></image>
+        <text class='tip'>佣金</text>
+        <text class='num'>¥{{info.actual_amount}}</text>
+      </view>
+    </navigator>
+    <navigator hover-class='none' url='../coupon/coupon'>
+      <view class='list'>
+        <image src='/images/new_icon6.png'></image>
+        <text class='tip'>优惠券</text>
+        <text class='num'>{{info.coupon_total}}张</text>
+      </view>
+    </navigator>
+    <navigator hover-class='none' url='../redpocket/redpocket'>
+      <view class='list'>
+        <image src='/images/new_icon7.png'></image>
+        <text class='tip'>红包</text>
+        <text class='num'>{{info.red_total}}个</text>
+      </view>
+    </navigator>
+    <navigator hover-class='none' url='../integral/integral'>
+      <view class='list'>
+        <image src='/images/new_icon8.png'></image>
+        <text class='tip'>积分</text>
+        <text class='num'>{{info.integral}}</text>
+      </view>
+    </navigator>
+  </view>
+
+  <view class='board' hidden='{{choose_status}}'></view>
+  <view class='board_con' hidden='{{choose_status}}'>
+    <view class='type'>选择类型</view>
+    <view class='way' bindtap='withdraw'>
+      <view>
+        <image src="{{way==1?'/images/zffs_on.png':'/images/zfsh_off.png'}}"></image>
+        <text>提现</text>
+      </view>
+    </view>
+    <view class='way' bindtap='transform'>
+      <view>
+        <image src="{{way==2?'/images/zffs_on.png':'/images/zfsh_off.png'}}"></image>
+        <text>转化余额</text>
+      </view>
+    </view>
+    <view class='commit' bindtap='commit'>确认</view>
+  </view>
+</view>

@@ -1,0 +1,36 @@
+<wxs module="util" src="../../utils/util.wxs" />
+<view>
+  <navigator hover-class='none' url='../manage_address/manage_address'>
+    <view class='center'>
+      <text class='choose' hidden='{{address.length!=0}}'>选择地址</text>
+      <view class='address' hidden='{{address.length==0}}'>
+        <text>收货人</text>
+        <view>
+          <text decode="{{true}}" space="{{true}}">{{address.name}}&nbsp;{{address.phone}}</text>
+          <image src='/images/next2.png'></image>
+        </view>
+        <view>
+          <text decode="{{true}}" space="{{true}}">{{address.area_info}}&nbsp;{{address.address}}</text>
+        </view>
+      </view>
+    </view>
+  </navigator>
+  <view class='main'>
+    <view class='content'>
+      <view class='left'>
+        <image src='{{util.HTTP + item.picUrl}}'></image>
+      </view>
+      <view class='right'>
+        <view class='title'>{{item.title}}</view>
+        <view class='num'>积分:{{item.price}}</view>
+      </view>
+    </view>
+  </view>
+  <view class='footer'>
+    <view class='sum'>积分总额 :<text style='color: #e02e24;'>{{integral}}</text>
+    </view>
+    <view class='consume'>消费积分 :<text style='color: #e02e24;'>{{item.price}}  </text>
+      <view class='submit' bindtap='exchange'>兑换</view>
+    </view>
+  </view>
+</view>

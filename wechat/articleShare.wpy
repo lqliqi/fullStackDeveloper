@@ -1,0 +1,355 @@
+<style>
+page {
+  background: #f4f4f4;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  padding: 86rpx 28rpx 28rpx;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+
+.build-img {
+  width: 695px;
+  height: 720px;
+  margin-top: 1000rpx;
+}
+
+.show-img {
+  width: 100%;
+  border-radius: 18rpx;
+  box-shadow: 0.5rpx 4rpx 1rpx #d5d5d5;
+}
+
+.goods_bg {
+  width: 100%;
+  height: 850rpx;
+}
+
+.goods_pic {
+  width: 100%;
+  height: 824rpx;
+  border: 2rpx solid #919191;
+}
+
+.goods_footer {
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  background: #000;
+  opacity: 0.6;
+  margin-top: -102rpx;
+  margin-left: 1rpx;
+}
+
+.left {
+  color: #fff;
+  font-size: 38rpx;
+  z-index: 100;
+  margin-left: 20rpx;
+}
+
+.right {
+  color: #fff;
+  font-size: 52rpx;
+  margin-left: 85rpx;
+}
+
+.center_pic {
+  width: 200rpx;
+  height: 200rpx;
+  margin-top: 28rpx;
+  position: relative;
+  left: 80rpx;
+}
+
+.center_text {
+  font-size: 34rpx;
+  color: #898989;
+  position: relative;
+  left: 310rpx;
+  top: -126rpx;
+}
+
+.goods_btn {
+  width: 100%;
+  height: 85rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fe4c55;
+  color: #fff;
+  font-size: 28rpx;
+  margin-top: 30rpx;
+}
+</style>
+<template>
+  <view class='container'>
+    <image class='show-img' mode='widthFix' src='{{imgPath}}' />
+    <button class='goods_btn' bindtap='saveImg'>保存</button>
+  </view>
+  <canvas class='build-img' canvas-id='buildImg' hidden='{{hide}}' />
+</template>
+<script>
+import wepy from 'wepy';
+export default class guideQrcode extends wepy.page {
+  config = {
+    navigationBarTitleText: '{$defaultTitle}'
+  };
+  data = {
+    imgPath: '{$defaultImg}',
+    hide: false,
+    articleId: ''
+  };
+  methods = {};
+  async onLoad(options) {
+    let urlPostData = JSON.parse(options.data);
+    // let urlPostData = {
+    //     articleId: '1000165',
+    //     discoverName: '运动小程序文章测试一',
+    //     imgUrl:
+    //         'https://testcmp.belle.net.cn/pics/wfx/STACCATO/ARTICLE_COVER_PIC/90A7FA118C124B10AB140F1F894A3313.jpg'
+    // };
+    let that = this;
+    wepy.showLoading({
+      title: '图片生成中'
+    });
+    let articleId = urlPostData.articleId;
+    let QRresponse = await that.getQrcode(articleId);
+    let { data, code, errorMsg } = QRresponse.data; //二维码图片
+    if (code !== 20000) {
+      wepy.showToast({
+        title: errorMsg || '数据错误！',
+        icon: 'success',
+        duration: 2000
+      });
+      return false;
+    }
+    urlPostData.qrCodePath = data;
+    that.urlMsg = urlPostData;
+    if (!urlPostData.imgUrl) {
+      wepy.showToast({
+        title: '二维码生成失败',
+        duration: 4000
+      });
+      wepy.hideLoading();
+      return false;
+    }
+    let imgUrl = urlPostData.imgUrl;
+    let qrCodePath = urlPostData.qrCodePath;
+    let discoverName = urlPostData.discoverName;
+    that.executeImg({
+      img: imgUrl,
+      qrCodePath: qrCodePath,
+      discoverName: discoverName
+    });
+  }
+  async getQrcode(articleId) {
+    let url = `${this.$parent.globalData.apiBaseUrl}/api/v2/getwxBcode`;
+    let shopId = wepy.getStorageSync('shopId');
+    var param = {
+      path: 'mphome/pages/findDetail',
+      scene: `${shopId}-${articleId}`
+    };
+    return wepy.request({ url: url, data: param });
+  }
+  saveImg(e) {
+    let that = this;
+    wepy
+      .saveImageToPhotosAlbum({
+        filePath: that.imgPath
+      })
+      .then(res => {
+        wepy.showToast({
+          title: '保存成功',
+          icon: 'success',
+          duration: 4000
+        });
+        // let returnUrl = that.urlMsg.sharePage;
+        // var path = '/pages/index?return_url=' + returnUrl;
+        setTimeout(function() {
+          wepy.navigateBack();
+        }, 2000);
+      })
+      .catch(e => {
+        wepy.showModal({
+          content: '保存失败'
+        });
+      });
+  }
+  //画图
+  executeImg(_data) {
+    let that = this;
+    let ctx = wepy.createCanvasContext('buildImg');
+    let width = 630;
+    let height = 760;
+    wepy
+      .downloadFile({
+        url: _data.img
+      })
+      .then(ret => {
+        if (ret.errMsg === 'downloadFile:ok') {
+          wepy
+            .getImageInfo({
+              src: ret.tempFilePath
+            })
+            .then(ret => {
+              ctx.setFillStyle('white');
+              ctx.fillRect(0, 0, width, height);
+              ctx.drawImage(ret.path, 0, 0, 630, 414);
+              let discoverName = _data.discoverName;
+              let length = discoverName.length;
+              function setTitleTxt(goodName, y) {
+                ctx.setFontSize(30);
+                ctx.setFillStyle('#333333');
+                ctx.fillText(goodName, 30, y);
+              }
+              if (length < 18) {
+                setTitleTxt(discoverName, 460);
+              } else {
+                let fitstLineTxt = discoverName.substring(
+                  0,
+                  18
+                );
+                let secondLineTxt = discoverName.substring(18);
+                setTitleTxt(fitstLineTxt, 460);
+                setTitleTxt(secondLineTxt, 500);
+              }
+              that.drawCode(ctx, _data.qrCodePath, width, height);
+            })
+            .catch(e => {
+              wepy.showModal({
+                content: e.errMsg
+              });
+            });
+        }
+      })
+      .catch(e => {
+        wepy.showModal({
+          content: '主图出错：' + _data.img + e.errMsg
+        });
+      });
+  }
+  //画二维码
+  drawCode(ctx, url, width, height) {
+    let that = this;
+    wepy
+      .downloadFile({
+        url: url
+      })
+      .then(ret2 => {
+        if (ret2.errMsg === 'downloadFile:ok') {
+          wepy
+            .getImageInfo({
+              src: ret2.tempFilePath
+            })
+            .then(qret => {
+              try {
+                ctx.drawImage(qret.path, 230, 515, 180, 180);
+              } catch (e) {
+                wepy.showModal({
+                  content: '图片生成出错'
+                });
+              }
+              ctx.draw();
+              wepy
+                .getSetting({})
+                .then(res => {
+                  if (
+                    !res.authSetting['scope.writePhotosAlbum']
+                  ) {
+                    wepy
+                      .authorize({
+                        scope: 'scope.writePhotosAlbum'
+                      })
+                      .then(() => {
+                        that.setToImg(width, height);
+                      })
+                      .catch(e => {
+                        wepy
+                          .openSetting({})
+                          .then(res => {
+                            if (
+                              res.authSetting['scope.writePhotosAlbum']
+                            ) {
+                              that.setToImg(
+                                width,
+                                height
+                              );
+                              return false;
+                            }
+                            console.log(
+                              'openSetting: success'
+                            );
+                            wepy.navigateBack();
+                          })
+                          .catch(data => {
+                            console.log(
+                              'openSetting: fail'
+                            );
+                            wepy.navigateBack();
+                          });
+                      });
+                  } else {
+                    that.setToImg(width, height);
+                  }
+                })
+                .catch(e => {
+                  wepy.showModal({
+                    content: '获取设置失败！'
+                  });
+                });
+            })
+            .catch(e => {
+              wepy.showModal({
+                content: '图片下载失败！'
+              });
+            });
+        } else {
+          wepy.showModal({
+            content: '28' + ret2.errMsg
+          });
+        }
+      })
+      .catch(e => {
+        console.log('5');
+        console.log(e);
+        wepy.showModal({
+          content: 'code下载失败' + e.errMsg
+        });
+      });
+  }
+  //把canvas 导出生成图片
+  setToImg(width, height) {
+    var that = this;
+    wepy
+      .canvasToTempFilePath({
+        x: 0,
+        y: 0,
+        width: width,
+        height: height,
+        destWidth: width,
+        destHeight: height,
+        canvasId: 'buildImg'
+      })
+      .then(res => {
+        that.imgPath = res.tempFilePath;
+        that.hide = true;
+        that.$apply();
+        wepy.hideLoading();
+      })
+      .catch(e => {
+        wepy.showModal({
+          content: '图片生成失败！\r\n图片生成过程中请勿操作'
+        });
+      });
+  }
+}
+</script>

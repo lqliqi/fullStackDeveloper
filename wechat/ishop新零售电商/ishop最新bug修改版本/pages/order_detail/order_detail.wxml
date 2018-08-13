@@ -1,0 +1,59 @@
+<wxs module="util" src="../../utils/util.wxs" />
+<view class='order_detail'>
+  <view>
+    <view>订单编号：{{detail.shop_order_number}}</view>
+    <view>付款时间：{{detail.status == 0?'该商品尚未付款':detail.pay_time}}</view>
+  </view>
+</view>
+
+ <view class='logistics' hidden='{{!(detail.status == 2) && !(detail.status == 3) &&  !(detail.status == 6) &&  !(detail.status == 7)}}' bindtap='logistics'>
+    <image src='/images/logistics_information.png' class='icon'></image>
+    <text>物流详情</text>
+    <image src='/images/next1.png' class='next'></image>
+  </view>
+
+<view class='address'>
+  <view class='address_detail'>
+    <view class='title'>收货人</view>
+    <text>{{detail.address_name}}    {{detail.address_phone}}</text>
+    <text>{{detail.address_area}} {{detail.address_site}}</text>
+  </view>
+
+</view>
+
+<view class='main'>
+  <view class='shop_title'>
+    <text>{{detail.shop_title}}</text>
+  </view>
+  <view class='content' wx:for="{{detail.goods}}">
+    <view class='left'>
+      <image src='{{util.HTTP + item.thumb_img}}'></image>
+    </view>
+    <view class='right'>
+      <view class='good_title'>{{item.title}}</view>
+      <view class='type'>{{item.attr.length==0?'':item.attr}}
+        <text>x{{item.number}}</text>
+      </view>
+      <view class='price'>¥{{item.price}}</view>
+    </view>
+  </view>
+</view>
+
+<view class='list'>
+  <view>
+    <text style='float:left'>运费</text>
+    <text style='float:right'>¥{{detail.freight}}</text>
+  </view>
+  <view>
+    <text style='float:left'>优惠券</text>
+    <text style='float:right'>-¥{{detail.coupon_price}}</text>
+  </view>
+  <view>
+    <text style='float:left'>红包价格</text>
+    <text style='float:right'>-¥{{detail.red_packet_price}}</text>
+  </view>
+  <view>
+    <text style='float:left'>实付款(含运费)</text>
+    <text style='float:right' class='price'>¥{{detail.price}}</text>
+  </view>
+</view>

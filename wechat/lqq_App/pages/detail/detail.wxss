@@ -1,0 +1,71 @@
+.detailBox{
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  box-sizing:border-box;
+  padding:10rpx 10rpx 10rpx 10rpx;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+
+
+}
+.content .title {
+  font-size:52rpx;
+  color:#000;
+  padding:36rpx 60rpx 36rpx 30rpx;
+  letter-spacing:2rpx;
+
+}
+.content .subscribe {
+  font-size: 24rpx;
+  letter-spacing: 2rpx;
+  padding: 0 30rpx;
+  color: #999;
+  vertical-align: center;
+}
+.content .subscribe .logo {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 30rpx;
+  margin-right: 30rpx;
+}
+.content .subscribe .info {
+  display: inline-block;
+}
+.content .subscribe .info .time {
+  font-size: 18rpx;
+}
+.content .subscribe .take {
+  display: inline-block;
+  float: right;
+  font-size: 20rpx;
+  padding: 10rpx 26rpx;
+  border-radius: 40rpx;
+  border: 1rpx solid #f00;
+  color: #f00;
+}
+ .content {
+   width: 100%;
+   height: 100%;
+   margin-top: 30rpx;
+}
+ .content .img {
+  width: 100%;
+  padding: 30rpx 0 10rpx;
+}
+ .content .p {
+  padding:20rpx 30rpx;
+  font-size:30rpx;
+  line-height:1.6;
+  letter-spacing:3rpx;
+
+}
+.footer {
+  margin: 60rpx 30rpx;
+  font-size: 28rpx;
+}
+.content image{
+  display: block;
+  width: 100%;
+}

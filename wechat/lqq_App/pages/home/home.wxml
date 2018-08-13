@@ -1,0 +1,42 @@
+<!--index.wxml-->
+<view class="container">
+   <!--  banner  -->
+    <swiper indicator-dots="{{indicatorDots}}" class="swiperBox"
+           autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+       <block wx:for="{{news}}" wx:if="{{index<3}}">
+         <swiper-item index="{{item}}">
+           <image src="{{item.cover}}" bindtap="goToNewsDetail" class="slide-image" id="{{item.id}}">
+           </image>
+         </swiper-item>
+       </block>
+     </swiper>
+     <!-- 菜单  -->
+    <view class="newsMenuBox">
+        <block wx:for="{{newsMenu}}">
+          <button bindtap="selectMenu" data-type="{{item.id}}" class="{{current ==item.id?'active':''}}">
+            {{item.title}}
+          </button>
+       </block>
+
+    </view> 
+    <!-- news list  -->
+    <view class="newsListBox">
+        <scroll-view class="newsListScrollBox" scroll-y="true" bindscrolltolower="lower">
+        <block wx:for="{{news}}">
+             <view class="newsList" bindtap="goToNewsDetail" id="{{item.id}}">
+                <image class="newsListImg" src='{{item.cover}}'></image>
+                <view class="newsListConent">
+                  <text class="newsListTitle">{{item.title}}</text>
+                  <text class="newsListDate">{{item.sendTime}}</text>
+                </view>    
+            </view>
+        </block>
+           
+          
+        </scroll-view>
+
+    </view>
+</view>
+
+
+

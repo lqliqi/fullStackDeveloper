@@ -1,0 +1,15 @@
+<wxs module="util" src="../../utils/util.wxs" />
+<view class='wrap'>
+  <swiper class='swiper-container' current='{{index}}' bindchange='switcher'>
+    <block wx:for='{{list}}'>
+      <swiper-item>
+        <image src='{{util.HTTP + item}}' bindtap='photo' data-index='{{index}}'></image>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<view class='footer'>
+  <text>{{current}}/{{list.length}}</text>
+  <image src='/images/xiazai.png' bindtap='download'></image>
+</view>

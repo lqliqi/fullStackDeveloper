@@ -1,0 +1,44 @@
+<view class="cart_head">
+  <button class="ope" bindtap='logistics' hidden='{{((detail.order_status!=9) && (detail.order_status!=10)) | (detail.type != 2)}}'>查看物流</button>
+</view>
+<view class='list'>
+  <view>
+    <text class='title'>店铺名称</text>
+    <text class='content'>{{detail.shop_title}}</text>
+  </view>
+  <view>
+    <text class='title'>退款类型</text>
+    <text class='content'>{{detail.type == 1?'退钱':'退货'}}</text>
+  </view>
+  <view>
+    <text class='title'>退款金额</text>
+    <text class='content'>¥{{detail.amount}}</text>
+  </view>
+  <view>
+    <text class='title'>退款说明</text>
+    <text class='content'>{{detail.explain}}</text>
+  </view>
+  <view>
+    <text class='title'>退款编号</text>
+    <text class='content'>{{detail.order_number}}</text>
+  </view>
+  <view>
+    <text class='title'>申请时间</text>
+    <text class='content'>{{detail.create_time}}</text>
+  </view>
+  <view>
+    <text class='title'>退款时间</text>
+    <text class='content'>{{detail.order_status == 10?detail.refund_time:'暂无退款时间'}}</text>
+  </view>
+  <view>
+    <text class='title'>退款状态</text>
+    <text class='content' wx:if="{{detail.order_status==6}}">审核中</text>
+    <text class='content' wx:if="{{detail.order_status==7}}">审核成功</text>
+    <text class='content' wx:if="{{detail.order_status==8}}">审核失败</text>
+    <text class='content' wx:if="{{detail.order_status==9}}">退货中</text>
+    <text class='content' wx:if="{{detail.order_status==10}}">退款成功</text>
+    <text class='content' wx:if="{{detail.order_status==11}}">退款失败</text>
+  </view>
+</view>
+
+<view class='sale_return' bindtap='sale_return' hidden='{{detail.order_status!=7}}'>退货给卖家</view>

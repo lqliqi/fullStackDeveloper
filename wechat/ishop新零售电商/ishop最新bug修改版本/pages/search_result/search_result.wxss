@@ -1,0 +1,129 @@
+page{
+  background: #f6f6f6;
+}
+.list_title {
+  padding-right: 80rpx;
+  overflow: hidden;
+  font-size: 26rpx;
+  line-height: 80rpx;
+  background: #fff;
+  border-top: 2rpx solid #d2d2d2;
+  border-bottom: 2rpx solid #d2d2d2;
+  position: relative;
+}
+
+.list_title .list {
+  width: 100%;
+  overflow: hidden;
+  color: #727272;
+}
+
+.list_title .list .title {
+  width: 25%;
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.list_title .list .title view {
+  width: 20rpx;
+}
+
+.list_title .choose {
+  width: 80rpx;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.list_title .choose:before {
+  position: absolute;
+  width: 2rpx;
+  height: 100%;
+  left: 0;
+  background: #d2d2d2;
+  top: 0;
+  content: '';
+}
+
+.list_title .choose image {
+  width: 40rpx;
+  height: 40rpx;
+  padding: 20rpx;
+}
+
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 4px solid;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  float: left;
+}
+
+.caret.up {
+  transform: rotate(180deg);
+  margin-bottom: 2px;
+}
+
+.caret.change {
+  color: #e60321;
+}
+
+.list_title .active .word {
+  color: #e60321;
+}
+
+.header1 {
+  width: 100%;
+  background-color: white;
+  border-top: 2rpx solid #f0f0f0;
+  border-bottom: 2rpx solid #f0f0f0;
+  padding-top: 20rpx;
+  height: 80rpx;
+}
+
+.header1 > view {
+  position: relative;
+  float: left;
+  width: 96%;
+  margin-left: 3%;
+}
+
+.header1 > view input {
+  /* width: 100%; */
+  display: block;
+  font-size: 24rpx;
+  line-height: 60rpx;
+  height: 60rpx;
+  border: none;
+  background: #f6f6f6;
+  border-radius: 16rpx;
+  padding-left: 50rpx;
+}
+
+.header1 > view image {
+  width: 50rpx;
+  height: 50rpx;
+  transform: scale(0.6);
+  /* left: 98%; */
+  top: 50%;
+  margin-top: -25rpx;
+  position: absolute;
+}
+
+.header1 .search {
+  position: absolute;
+  right: 3%;
+  font-size: 24rpx;
+  line-height: 40rpx;
+  top: 50%;
+  margin-top: -20rpx;
+  color: #333;
+  z-index: 9;
+}

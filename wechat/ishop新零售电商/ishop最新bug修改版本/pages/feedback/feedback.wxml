@@ -1,0 +1,19 @@
+<view>
+  <view class="cart_head">
+    <button class="ope" bindtap='commit'>提交</button>
+  </view>
+  <view class='type'>
+    <view class='title'>反馈类型</view>
+    <view class='list'>
+      <view wx:for="{{feed_list}}" bindtap='chooseType' data-index='{{index}}' data-title='{{item.title}}' class="{{currentTab==index?'cur':''}}">{{item.title}}</view>
+    </view>
+  </view>
+  <view class='type_content'>
+    <view class='content_title'>反馈内容:</view>
+    <textarea class='content' bindinput='content'></textarea>
+  </view>
+  <view class='type_content'>
+    <view class='content_title'>联系方式:</view>
+    <input placeholder='手机号或邮箱(选填)' bindinput='contact'></input>
+  </view>
+</view>

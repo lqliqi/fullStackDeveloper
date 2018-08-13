@@ -1,0 +1,38 @@
+<wxs module="util" src="../../utils/util.wxs" />
+<view class='empty' hidden="{{data}}">
+  <image src='/images/empty_iv_3.png'></image>
+  <view>暂无记录</view>
+</view>
+
+<view hidden="{{!data}}">
+  <view class='center'>
+    <view class='left'>
+      <image src='{{util.HTTP + picUrl}}'></image>
+      <text>共{{num}}件商品</text>
+    </view>
+    <view class='right'>
+      <text wx:if="{{info.state==0}}">物流状态 : 在途中</text>
+      <text wx:elif="{{info.state==1}}">物流状态 : 已揽收</text>
+      <text wx:elif="{{info.state==2}}">物流状态 : 疑难</text>
+      <text wx:elif="{{info.state==3}}">物流状态 : 已签收</text>
+      <text wx:elif="{{info.state==4}}">物流状态 : 退签</text>
+      <text wx:elif="{{info.state==5}}">物流状态 : 同城派送中</text>
+      <text wx:elif="{{info.state==6}}">物流状态 : 退回</text>
+      <text wx:else>物流状态 : 转单</text>
+      <view>承运公司 : {{info.com}}快递</view>
+      <view>运单编号 : {{info.nu}}</view>
+    </view>
+  </view>
+  <view class='log'>
+    <view class='title'>物流跟踪</view>
+    <view class='track-list'>
+      <view wx:for="{{info.data}}">
+        <view>
+          <image src="{{index==0?'/images/logistics_first.png':'/images/logistics_second.png'}}"></image>
+          <text class='txt'>{{item.context}}</text>
+          <text class='time'>{{item.time}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

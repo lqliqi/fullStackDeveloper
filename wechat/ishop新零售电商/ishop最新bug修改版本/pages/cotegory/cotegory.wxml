@@ -1,0 +1,73 @@
+<wxs module="util" src="../../utils/util.wxs" />
+<view class='cate_con'>
+  <view class='cate_head'>
+    <view class='search_head'>
+      <image src='/images/fl-sousuotubiao.png' class='search_icon'></image>
+      <input type='text' placeholder='搜索商品' value='{{title}}' bindinput='search_input'></input>
+    </view>
+    <text bindtap='search'>搜索</text>
+    <image src="{{grid?'/images/tu1.png':'/images/tu2.png'}}" class='icon' bindtap='changeCate'></image>
+  </view>
+
+  <view class='list_title'>
+    <view class='list'>
+      <view class="{{currentTab==1?'active title':' title'}}" data-index='1' bindtap='onComposite'>综合</view>
+      <view class="{{currentTab==2?'active title':' title'}}" data-index='2' bindtap='onSaleClick'>销量</view>
+      <view class="{{currentTab==3?'active title':' title'}}" data-index='3' bindtap='onPriceClick'>价格
+        <view>
+          <text class="caret up {{(currentTab==3) &&(rank == 'desc')?'cur':''}}"></text>
+          <text class="caret down {{(currentTab==3) &&(rank == 'asc')?'cur':''}}"></text>
+        </view>
+      </view>
+    </view>
+    <view class="choose {{filter?'active':''}}" bindtap='changeFilter'>筛选
+      <view>
+        <text class="caret {{is_filtrate?'up':''}} {{filter?'cur':''}}"></text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view hidden="{{is_filtrate}}">
+  <view style='text-align:center;margin-top:100rpx;' hidden="{{goods_list.length!=0}}">
+    <image style='width:356rpx;height:328rpx' src='/images/empty_iv_4.png'></image>
+    <view>没有找到您想要的宝贝</view>
+    <view>换一个关键字吧</view>
+  </view>
+</view>
+<view class="cate_list_group {{!grid?'list_cate_group':''}}" hidden='{{is_filtrate}}'>
+  <view class='cate_list' wx:for="{{goods_list}}">
+    <navigator hover-class='none' url='../good_detail/good_detail?id={{item.id}}'>
+      <view class='cate_pic'>
+        <image src='{{util.HTTP + item.thumb_img}}'></image>
+      </view>
+      <view class='cate_det'>
+        <view class='cate_title'>{{item.title}}</view>
+        <view class='ori_price'>
+          <view class='price'>
+            <text class='sign'>￥</text>
+            <text class='sign'>{{item.price}}</text>
+          </view>
+          <text class='inter_pri'>销量 {{item.sale_number}}</text>
+        </view>
+      </view>
+    </navigator>
+  </view>
+</view>
+
+<view class='condition_con' style="{{is_filtrate?'':'display:none'}}">
+  <view class='condition'>
+    <text class='title'>价格区间（元）</text>
+    <view class='input_text'>
+      <input type='number' placeholder='最低价' value='{{value_min}}' bindinput='min'></input>
+      <text>-</text>
+      <input type='number' placeholder='最高价' value='{{value_max}}' bindinput='max'></input>
+    </view>
+  </view>
+
+
+  <view class='ope_foot'>
+    <button class='reset' bindtap='reset'>重置</button>
+    <button class='submit' bindtap='submit'>确定</button>
+  </view>
+</view>

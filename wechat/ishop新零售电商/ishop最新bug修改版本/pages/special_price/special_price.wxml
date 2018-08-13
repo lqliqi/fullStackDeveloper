@@ -1,0 +1,61 @@
+<wxs module="util" src="../../utils/util.wxs" />
+<view class="wrap-off">
+  <loading hidden="{{hidden}}">
+    加载中...
+  </loading>
+  <view class='board' hidden='{{!is_open}}'></view>
+  <view class='tablist'>
+    <view>
+      <!-- <swiper display-multiple-items='3' class='swiper'>
+        <block wx:for="{{sale_type}}" wx:for-index="idx">
+          <swiper-item>
+            <view class='swiper-slide {{currentNavtab==idx ?"active":""}}' data-idx='{{idx}}' data-item='{{item}}' bindtap='switchTab' data-parenTid='{{item.id}}'>
+              <text>{{item.title}}</text>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper> -->
+      <scroll-view scroll-x scroll-into-view='{{scroll_id}}' style=" white-space: nowrap; display: flex;background:white">
+        <view id='a{{idx}}' wx:for="{{sale_type}}" wx:for-index="idx" class='swiper-slide {{currentNavtab==idx ?"active":""}}' style='display:inline-block' data-idx='{{idx}}' data-item='{{item}}' bindtap='switchTab' data-parenTid='{{item.id}}'>
+          <text>{{item.title}}</text>
+        </view>
+      </scroll-view>
+    </view>
+    <view class='more' bindtap='changeOpen'>
+      <image style="{{is_open?'transform: rotate(180deg);':''}}" src='/images/view_classily_bottom.png'></image>
+    </view>
+  </view>
+
+  <view class='classify' hidden='{{!is_open}}'>
+    <view wx:for="{{sale_type}}">
+      <view class='classify_item' bindtap='clickItem' data-idx='{{index}}' data-item='{{item}}' data-parenTid='{{item.id}}'>{{item.title}}</view>
+    </view>
+  </view>
+
+  <view class='empty' hidden='{{sale_list.length!=0}}'>
+    <image src='/images/empty_iv_6.png'></image>
+    <view>暂无商品</view>
+  </view>
+
+  <view class='tabcon'>
+    <view class='cur'>
+      <view class='list'>
+        <view wx:for="{{sale_list}}">
+          <navigator  hover-class='none' url='../good_detail/good_detail?id={{item.goods_id}}&isSpecail=1&sale_price={{item.sale_price}}'>
+            <view class='goods'>
+              <image src='{{util.HTTP + item.thumb_img}}'></image>
+              <text>销量 {{item.sale_number}}</text>
+            </view>
+            <view class='goods_title'>
+              {{item.title}}
+            </view>
+            <view class='price'>
+              ¥{{item.sale_price}}
+              <text>¥{{item.price}}</text>
+            </view>
+          </navigator>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

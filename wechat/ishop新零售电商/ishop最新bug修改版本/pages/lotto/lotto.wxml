@@ -1,0 +1,27 @@
+<wxs module="util" src="../../utils/util.wxs" />
+<view class="top-tab">
+  <view class="toptab {{currentNavtab==idx ? 'active' : ''}}" wx:for="{{navTab}}" wx:for-index="idx" wx:for-item="itemName" data-idx="{{idx}}" bindtap="switchTab">
+    {{itemName}}
+  </view>
+</view>
+
+<view class='empty' hidden='{{list.length!=0}}'>
+  <image src='/images/empty_tv_order.png'></image>
+  <view>还没有相关订单呢</view>
+</view>
+
+<view class='list' wx:for="{{list}}">
+  <view class='content' style='overflow:hidden;background:white;'>
+    <view class='left'>
+      <image src='{{util.HTTP + item.picUrl}}'></image>
+    </view>
+    <view class='right'>
+      {{item.title}}
+    </view>
+  </view>
+  <view class='submit'>
+    <view hidden='{{currentNavtab!=0}}' bindtap='drawDown' data-index='{{index}}' data-item='{{item}}'>领取</view>
+    <view hidden='{{currentNavtab!=1}}' bindtap='commit' data-index='{{index}}' data-item='{{item}}'>确认收货</view>
+    <view class="{{currentNavtab==2?'':'cur'}}" hidden='{{currentNavtab==0}}' bindtap='logistics' data-index='{{index}}' data-item='{{item}}'>查看物流</view>
+  </view>
+</view>

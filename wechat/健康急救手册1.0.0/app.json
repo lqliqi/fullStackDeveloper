@@ -1,0 +1,11 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/information/information"
+    ],
+    "window": {
+        "navigationBarTitleText": "生活急救宝典",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTextStyle": "black"
+    }
+}

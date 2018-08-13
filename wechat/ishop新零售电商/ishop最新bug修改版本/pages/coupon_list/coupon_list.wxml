@@ -1,0 +1,41 @@
+<wxs module="filters" src="tofix.wxs" />
+<view class='wrap-yhq'>
+  <loading hidden="{{hidden}}">
+    加载中...
+  </loading>
+  <view class='empty' hidden='{{coupon_list.length!=0}}'>
+    <image src='/images/empty_iv_5.png'></image>
+    <view>暂无优惠券</view>
+  </view>
+  <view hidden='{{coupon_list.length==0}}'>
+    <view class='get'>
+      <text>点击下方优惠券即可领取</text>
+    </view>
+    <view class='list'>
+      <view class='center' wx:for="{{coupon_list}}" bindtap='getcoupon' data-couponid='{{item.id}}' data-index='{{index}}'>
+        <view class='main'>
+          <image src="{{item.receive_status==1?'/images/lj-yilingyouhuiquan.png':'/images/yh-lijishiyong.png'}}"></image>
+          <view class='left'>
+            <view class="price {{item.receive_status==2?'yellow':''}}">¥
+              <text>{{filters.toFix(item.actual_price)}}</text>
+            </view>
+          </view>
+          <view class='right'>
+            <view>
+              <view class="dress {{item.receive_status==2?'yellow':''}}">{{item.title}}</view>
+              <view class='num'>剩余{{item.number}}张</view>
+            </view>
+            <view class='use' catchtap='opentip' data-index='{{index}}'>
+              <text>消费满{{item.virtual_price}}元使用</text>
+              <image src='/images/down1.png' class="{{is_open[index]?'rotate':''}}"></image>
+            </view>
+          </view>
+        </view>
+        <view class="tips {{is_open[index]==false?'none':''}}">
+          <view>1.订单满{{item.virtual_price}}元使用(有特价商品的订单除外)</view>
+          <view>2.不可叠加使用</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

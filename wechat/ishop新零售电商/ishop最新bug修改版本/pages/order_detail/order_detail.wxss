@@ -1,0 +1,175 @@
+page {
+  background: #f6f6f6;
+}
+
+.order_detail {
+  background: white;
+  padding-bottom: 1%;
+  padding-top: 1%;
+}
+
+.order_detail > view {
+  background: white;
+  width: 97%;
+  margin-left: 3%;
+  overflow: hidden;
+  font-size: 28rpx;
+  line-height: 40rpx;
+}
+
+.address {
+  margin-top: 6rpx;
+  width: 100%;
+  background: white;
+  padding: 1% 0;
+  margin-bottom: 20rpx;
+}
+
+.address .address_detail {
+  width: 97%;
+  margin-left: 3%;
+  padding: 1% 0 2%;
+}
+
+.address .address_detail .title {
+  display: block;
+  font-size: 28rpx;
+  line-height: 2;
+  color: #a6a6a6;
+}
+
+.address .address_detail text {
+  font-size: 28rpx;
+  line-height: 40rpx;
+  display: block;
+}
+
+.logistics {
+  border-top: 2rpx solid #f6f6f6;
+  padding-left: 3%;
+  height: 80rpx;
+  background: white;
+  overflow: hidden;
+}
+
+.logistics text {
+  line-height: 80rpx;
+  font-size: 30rpx;
+  margin-left: 10rpx;
+  float: left;
+}
+
+.logistics .icon {
+  width: 34rpx;
+  height: 34rpx;
+  margin-top: 23rpx;
+  display: block;
+  float: left;
+}
+
+.logistics .next{
+  width: 12rpx;
+  height: 20rpx;
+  float: right;
+  margin: 30rpx;
+}
+
+.main {
+  margin-top: 6rpx;
+}
+
+.main .shop_title {
+  font-size: 28rpx;
+  line-height: 3;
+  background: white;
+  padding-left: 3%;
+  margin-top: 1%;
+  overflow: hidden;
+}
+
+.main .shop_title text {
+  float: left;
+  color: #212121;
+}
+
+.main .content {
+  border-bottom: 2rpx solid #fafafa;
+  overflow: hidden;
+  background: white;
+  margin-top: 1%;
+  position: relative;
+  padding: 10rpx 3% 10rpx 250rpx;
+  height: 204rpx;
+}
+
+.main .content .left {
+  position: absolute;
+  width: 232rpx;
+  height: 184rpx;
+  top: 50%;
+  margin-top: -92rpx;
+  left: 10rpx;
+}
+
+.main .content .left image {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.main .content .right {
+  width: 100%;
+}
+
+.main .content .right .good_title {
+  color: #212121;
+  width: 100%;
+  font-size: 24rpx;
+  line-height: 40rpx;
+  height: 80rpx;
+  overflow: hidden;
+  margin-top: 10rpx;
+}
+
+.right .type {
+  font-size: 24rpx;
+  line-height: 2;
+  height: 48rpx;
+  color: #b7b7b7;
+}
+
+.right .type text {
+  font-size: 28rpx;
+  float: right;
+}
+
+.right .price {
+  margin-top: 12rpx;
+  font-size: 28rpx;
+  line-height: 32rpx;
+  color: #e02e24;
+}
+
+.list {
+  width: 100%;
+  background: white;
+  margin-top: 1%;
+}
+
+.list > view {
+  margin-left: 3%;
+  font-size: 28rpx;
+  line-height: 3;
+  padding-right: 3%;
+  color: #212121;
+  overflow: hidden;
+  border-top: 2rpx solid #f1f1f1;
+}
+
+.list > view:first-child {
+  border-top: none;
+}
+
+.list .price {
+  color: #e02e24;
+}

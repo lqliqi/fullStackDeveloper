@@ -1,0 +1,182 @@
+<wxs module="filters" src="tofix.wxs" />
+<wxs module="util" src="../../utils/util.wxs" />
+<!-- <scroll-view style='height:100vh;' scroll-y='{{able}}'> -->
+<loading hidden="{{hidden}}">
+  加载中...
+</loading>
+<!--弹出窗口遮罩  -->
+<view class='board' hidden='{{able}}'></view>
+<view class="cart_head">
+  <button class="ope" bindtap='edit' hidden='{{cart_list.length==0}}'>{{edit?'编辑':'完成'}}</button>
+</view>
+<view class='empty' hidden='{{cart_list.length!=0}}'>
+  <image src='/images/empty.png'></image>
+</view>
+
+<!--购买状态下  -->
+<view class='cart_con'>
+  <view class='view_box' wx:for="{{cart_list}}" hidden='{{!edit}}'>
+    <view class='cart_list head'>
+      <view class='con'>
+        <view class='check_con' bindtap='shop_check' data-index='{{index}}'>
+          <image src="{{shop_is_check[index]?'/images/zffs_on.png':'/images/zfsh_off.png'}}" class='check'></image>
+        </view>
+        <navigator  hover-class='none' url='../shop_details/shop_details?shop_id={{item.shop_id}}'>
+          <view class='shop_name'>
+            <text>{{item.title}}</text>
+            <image src='/images/next1.png' class="more"></image>
+          </view>
+        </navigator>
+      </view>
+    </view>
+    <view class='cart_list'>
+      <view class='con' wx:for="{{item.list}}" wx:for-index="idx">
+        <view class='check_con' bindtap='check' data-index='{{index}}' data-idx='{{idx}}'>
+          <image src="{{is_check[index][idx]?'/images/zffs_on.png':'/images/zfsh_off.png'}}" class='check'></image>
+        </view>
+        <navigator  hover-class='none' url='../good_detail/good_detail?id={{item.id}}'>
+          <view class='goods_con'>
+            <image src='{{util.HTTP + item.thumb_img}}' class='pic'></image>
+            <view class='goods_det'>
+              <view class='title'>{{item.title}}</view>
+              <view class='color'>{{item.attr}}
+                <text class='num'>×{{item.number}}</text>
+              </view>
+              <view class='price'>
+                <text>￥</text>{{filters.integer(item.price)}}.
+                <text>{{filters.decimals(item.price)}}</text>
+              </view>
+            </view>
+          </view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+
+  <!--编辑状态下  -->
+  <view class='view_con' wx:for="{{cart_list}}" hidden='{{edit}}'>
+    <view class='cart_list head'>
+      <view class='con' bindtap='shop_check' data-index='{{index}}'>
+        <view class='check_con'>
+          <image src="{{shop_is_check[index]?'/images/zffs_on.png':'/images/zfsh_off.png'}}" class='check'></image>
+        </view>
+        <navigator  hover-class='none' url='../shop_details/shop_details?shop_id={{item.shop_id}}'>
+          <view class='shop_name'>
+            <text>{{item.title}}</text>
+            <image src='/images/next1.png' class="more"></image>
+          </view>
+        </navigator>
+      </view>
+    </view>
+    <view class='cart_list' wx:for="{{item.list}}" wx:for-index="idx">
+      <view class='goods_title'>{{item.title}}</view>
+      <view class='con'>
+        <view class='check_con' bindtap='check' data-index='{{index}}' data-idx='{{idx}}'>
+          <image src="{{is_check[index][idx]?'/images/zffs_on.png':'/images/zfsh_off.png'}}" class='check'></image>
+        </view>
+        <navigator hover-class="none">
+          <view class='goods_con'>
+            <image src='{{util.HTTP + item.thumb_img}}' class='pic'></image>
+            <view class='goods_det'>
+              <view class='cart_num'>
+                <view class='reduce' bindtap="{{item.number == 1?'':'reduce'}}" data-item='{{item}}'>-</view>
+                <view class='num_text'>
+                  <input type='text' value='{{item.number}}'></input>
+                </view>
+                <view class='add' bindtap='add' data-item='{{item}}'>+</view>
+              </view>
+              <view class='color_more' bindtap="{{item.attr.length==0?'':'showChooseSize'}}" data-item='{{item}}'>
+                <view class='color'>{{item.attr.length==0?'无属性':item.attr}}
+                  <image src='/images/next1.png'></image>
+                </view>
+              </view>
+            </view>
+          </view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<!--猜你喜欢  -->
+<view class='guess'>
+  <view class='guess_like_con'>
+    <view class='guess_like'>
+      <text>猜你喜欢</text>
+      <image src='/images/my/zz-xian.png'></image>
+    </view>
+  </view>
+  <view class='sell_con'>
+    <view class='list_group'>
+      <block wx:for="{{like_list}}">
+        <view>
+          <navigator hover-class='none' url="../good_detail/good_detail?id={{item.id}}">
+            <view class='pic'>
+              <image mode='aspectFit' src='{{util.HTTP + item.thumb_img}}'></image>
+            </view>
+            <text class='title'>{{item.title}}</text>
+            <view class='price'>
+              <text class='yen'>¥{{item.price}}</text>
+              <text class='sale_num'>销量{{item.sale_number}}</text>
+            </view>
+          </navigator>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>
+
+<!--选择属性规格  -->
+<view class='spsx' hidden='{{able}}'>
+  <view class='sp'>
+    <image src='{{util.HTTP + good_detail.thumb_img}}'></image>
+    <view class='title_bg'>
+      <view class='title'>{{good_detail.title}}</view>
+      <view class='specification'>
+        <text>已选 {{size}}</text>
+        <view class='price'>¥{{buying_price}}</view>
+      </view>
+    </view>
+  </view>
+  <view class='size' wx:for="{{goods_attr}}" wx:for-index="idx">
+    <view class='size_title'>{{item.title}}</view>
+    <view class='size_list'>
+      <view wx:for="{{item.list}}" bindtap='chooseSize' data-data='{{item}}' data-index='{{idx}}' class="{{size_array[idx]==item?'cur':''}}">
+        {{item}}
+      </view>
+    </view>
+  </view>
+  <view class='num'>
+    <view>
+      <text>数量</text>
+    </view>
+    <view class='num_border'>
+      <view class='border' bindtap='quantity_reduce'>-</view>
+      <view class='border_double'>{{quantity}}</view>
+      <view class='border' bindtap='quantity_increase'>+</view>
+    </view>
+  </view>
+  <view class='footer1'>
+    <view class='ljgm' bindtap='commit'>确定</view>
+  </view>
+  <image src='/images/cancel.png' class='cancel' bindtap='close'></image>
+</view>
+
+<view class='footer_cart' hidden='{{cart_list.length==0}}'>
+  <view class='select_all' bindtap='select_all'>
+    <image src="{{all_check?'/images/zffs_on.png':'/images/zfsh_off.png'}}" class="check"></image>
+    <text>全选</text>
+  </view>
+  <view class='total_det'>
+    <view class='total_num' hidden='{{!edit}}'>
+      <view class='price'>合计：
+        <text>￥{{sum}}</text>
+      </view>
+      <view class='freight'>不含运费</view>
+    </view>
+    <button wx:if="{{edit}}" class='ope' bindtap='accounts'>结算({{num}})</button>
+    <button wx:else class='ope' bindtap='destory'>删除</button>
+  </view>
+</view>
+<!-- </scroll-view> -->

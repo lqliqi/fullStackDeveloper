@@ -1,0 +1,48 @@
+<wxs module="util" src="../../utils/util.wxs" />
+<view class="top-tab ">
+  <view class="toptab {{currentNavtab==idx ? 'active' : ''}}" wx:for="{{navTab}}" wx:for-index="idx" wx:for-item="itemName" data-idx="{{idx}}" bindtap="switchTab">
+    <text>{{itemName}}</text>
+  </view>
+</view>
+
+<view class='empty' hidden='{{info.length!=0}}'>
+  <image src='/images/empty_iv_3.png'></image>
+  <view>暂时没有数据</view>
+  <view>加油吧</view>
+</view>
+
+<view class='center'>
+  <view wx:for="{{info}}">
+    <view>
+      <view class='time'>
+        订单时间:{{item.create_time}}
+      </view>
+      <view class='pay_time'>
+        付款时间:{{item.status == 0?'未付款':item.pay_time}}
+      </view>
+    </view>
+    <view class='main'>
+      <image src='/images/distribution_bg.png' class='main_bg'></image>
+      <view class='left'>
+        <image wx:if="{{item.avatar!=''}}" src='{{util.HTTP + item.avatar}}'></image>
+        <image wx:else src='/images/default_user.png'></image>
+        <text>{{item.nickname}}</text>
+      </view>
+      <view class='right'>
+        <view class='content'>
+          <view>金额 : {{item.price}}元</view>
+          <view>佣金 : {{item.brokerage}}元</view>
+          <view wx:if="{{item.level == 1}}">级别 : 一级会员</view>
+          <view wx:elif="{{item.level == 2}}">级别 : 二级会员</view>
+          <view wx:elif="{{item.level == 3}}">级别 : 三级会员</view>
+          <view wx:elif="{{item.level == 4}}">级别 : 四级会员</view>
+          <view wx:elif="{{item.level == 5}}">级别 : 五级会员</view>
+          <view wx:elif="{{item.level == 6}}">级别 : 六级会员</view>
+          <view wx:elif="{{item.level == 7}}">级别 : 七级会员</view>
+          <view wx:elif="{{item.level == 8}}">级别 : 八级会员</view>
+          <view wx:else="{{item.level == 9}}">级别 : 九级会员</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,42 @@
+<wxs module="util" src="../../utils/util.wxs" />
+<view class='wrap-shoe'>
+  <loading hidden="{{hidden}}">
+    加载中...
+  </loading>
+  <swiper class='swiper' indicator-dots="true" autoplay="true" indicator-active-color="#E03025" indicator-color="#bbbbbb" circular="true">
+    <block wx:for="{{detail.banner_list}}">
+      <swiper-item>
+        <image src="{{util.HTTP + item.picUrl}}" bindtap='clickBanner' data-item='{{item}}'/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='tab'>
+    <scroll-view class='tablist' scroll-x>
+      <block wx:for="{{tablist}}">
+        <text class="classify {{currentNavtab==index?'active':''}}" data-idx="{{index}}" data-id='{{item.id}}' bindtap='switchTab'>{{item.title}}</text>
+      </block>
+    </scroll-view>
+  </view>
+
+  
+  <scroll-view class='second_tablist' scroll-x="true" hidden='{{secondHidden}}'>
+      <view>
+        <text wx:for="{{detail.data}}" data-idx="{{index}}" class="second_tab {{currentSecondTab==index?'cur':''}}" data-id='{{item.id}}' bindtap='switchSecond'>{{item.title}}</text>
+      </view>
+    </scroll-view>
+
+  <view class='tabcon' hidden='{{goods_data.length==0}}'>
+      <view class='list_group'>
+        <view wx:for="{{goods_data}}">
+          <navigator hover-class='none' url='../good_detail/good_detail?id={{item.id}}'>
+            <image src='{{util.HTTP + item.thumb_img}}'></image>
+            <view class='title'>{{item.title}}</view>
+            <view class='price'>¥{{item.price}}
+              <text class='sale_num'>销量 {{item.sale_number}}</text>
+            </view>
+          </navigator>
+        </view>
+      </view>
+    </view>
+
+</view>

@@ -1,0 +1,71 @@
+/*  banner  */
+.swiperBox{
+  display: block;
+  width:100%;
+  height: 320rpx;
+}
+.swiperBox image{
+  display: block;
+  width:100%;
+  height: 320rpx;
+}
+.newsMenuBox{
+  height: 92rpx;
+  display: block;
+  overflow-y: auto;
+}
+.newsMenuBox button{
+  float: left;
+  width:33.33%;
+  box-sizing: border-box;
+  font-size: 36rpx;
+}
+.newsMenuBox button.active{
+  color: #c40006;
+}
+/* newslistBox  */
+.newsListBox{
+  width:100%;
+  height:920rpx;
+  overflow-y: scroll
+}
+.newsListScrollBox{
+  height:920rpx;
+}
+.newsListBox .newsList{
+  width: 100%;
+  min-height: 200rpx;
+  padding: 20rpx 20rpx;
+  box-sizing: border-box;
+  overflow-y:auto;
+  border-bottom: 2rpx solid #cecece;
+}
+.newsListImg{
+  display: block;
+    float: left;
+    width: 280rpx;
+    height: 180rpx;
+}
+.newsListConent{
+  float: left;
+  width: 400rpx;
+  height: 180rpx;
+  margin-left: 10rpx;
+  overflow-y: auto;
+}
+.newsListTitle{
+  width: 100%;
+  display: -webkit-box;
+  font-size:32rpx;
+  line-height: 40rpx;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:3;
+  overflow: hidden;
+  text-overflow:ellipsis;
+}
+.newsListDate{
+  display: block;
+  font-size: 30rpx;
+  margin-top: 20rpx;
+}

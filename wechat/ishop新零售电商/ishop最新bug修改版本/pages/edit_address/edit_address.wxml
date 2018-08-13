@@ -1,0 +1,34 @@
+<view class="wrap">
+  <!-- <view class="cart_head">
+    <button class="ope" >保存</button>
+  </view> -->
+  <view class='info'>
+    <view>
+      <text>收货人 : </text>
+      <input maxlength='10' type='text' bindinput='consignee' value='{{consignee}}'></input>
+    </view>
+    <view>
+      <text>联系号码 : </text>
+      <input type='number' maxlength='11' bindinput='contact_num' value='{{contact_num}}'></input>
+    </view>
+    <view>
+      <picker mode="multiSelector" bindchange="pickerChange" class='picker_con' bindcolumnchange="pickerColumnChange" value="{{index}}" range="{{city}}" range-key="{{'area_name'}}">
+      <text>所在地区 : </text>
+        <view style='overflow: hidden;text-overflow:ellipsis;white-space: nowrap;' class="picker">
+          {{address}}
+        </view>
+        <image src='/images/next1.png'></image>
+      </picker>
+    </view>
+    <view class='detail'>
+      <text>详细地址 : </text>
+      <textarea maxlength='40' bindinput='detail_address' value='{{detail_address}}'></textarea>
+    </view>
+    <view bindtap='check_default'>
+      <text>设为默认地址 </text>
+      <image style='width:31rpx;height:31rpx;' src="{{is_default?'/images/zffs_on.png':'/images/zfsh_off.png'}}"></image>
+    </view>
+  </view>
+</view>
+
+<view class='save' bindtap='save'>保存</view>

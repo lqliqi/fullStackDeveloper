@@ -1,0 +1,17 @@
+<wxs module="util" src="../../utils/util.wxs" />
+<view wx:for="{{list}}" style='overflow:hidden;background:white'>
+  <view class='content'>
+    <view class='left'>
+      <image src='{{util.HTTP + item.thumb_img}}'></image>
+    </view>
+    <view class='right'>
+      <view class='good_title'>{{item.title}}</view>
+      <view class='type'>{{item.attr.length==0?'':item.attr}}
+        <text>x{{item.number}}</text>
+      </view>
+      <view class='price'>¥{{item.price}}</view>
+    </view>
+  </view>
+  <view wx:if="{{item.status == 2}}" data-index='{{index}}' class='evaluate' bindtap='evaluate' data-item='{{item}}'>评价</view>
+  <view wx:else class='evaluated'>已评价</view>
+</view>

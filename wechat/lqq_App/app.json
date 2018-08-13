@@ -1,0 +1,20 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/detail/detail"
+  ],
+  "window":{
+    "navigationStyle":"default",
+    "backgroundTextStyle":"dark",
+    "backgroundColor": "#ffffff",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "篮球圈Lite",
+    "navigationBarTextStyle":"black",
+     "enablePullDownRefresh":true
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

@@ -1,0 +1,105 @@
+page {
+  background: #f6f6f6;
+  position: relative;
+}
+
+
+.cart_head button {
+  float: right;
+  margin-right: 3%;
+  font-size: 24rpx;
+  line-height: 72rpx;
+  background: none;
+  border: none;
+}
+
+.cart_head button::after {
+  border: none;
+}
+
+.empty {
+  margin-top: 30%;
+  text-align: center;
+  font-size: 34rpx;
+}
+
+.empty image {
+  width: 356rpx;
+  height: 328rpx;
+}
+
+.center {
+  height: auto;
+  width: 94%;
+  padding: 0 3%;
+  background: white;
+  border-bottom: 5px solid #f6f6f6;
+}
+
+.center > view:nth-of-type(1) {
+  color: #212121;
+  padding-top: 20rpx;
+  font-size: 28rpx;
+}
+
+.center .address {
+  color: #808080;
+  /* line-height: 68rpx; */
+  border-bottom: 2rpx;
+  font-size: 26rpx;
+  padding: 2% 0;
+}
+
+.menu {
+  overflow: hidden;
+  font-size: 28rpx;
+  line-height: 40rpx;
+}
+
+.menu .default {
+  float: left;
+  overflow: hidden;
+}
+
+.menu .default image {
+  width: 30rpx;
+  height: 30rpx;
+  float: left;
+  margin-top: 6rpx;
+  margin-right: 8rpx;
+}
+
+.menu  text {
+  float: left;
+  margin-left: 5rpx;
+  color: #808080;
+  margin-right: 10px;
+}
+
+.menu .operate {
+  float: right;
+}
+
+.menu .operate > view {
+  overflow: hidden;
+  display: inline-block;
+}
+
+.menu .operate > view image {
+  width: 33rpx;
+  height: 33rpx;
+  float: left;
+  margin-top: 4rpx;
+}
+
+.add_address {
+  bottom: 0;
+  width: 100%;
+  height: 80rpx;
+  background: #e73c0a;
+  font-size: 34rpx;
+  color: white;
+  text-align: center;
+  line-height: 80rpx;
+  position: fixed;
+}

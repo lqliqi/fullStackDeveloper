@@ -1,0 +1,30 @@
+
+<scroll-view scroll-y class='scroll-box'>
+  <view class="page">
+      <view class="banner">
+          <image class="banner-img" src="../../images/banner.png"></image>
+      </view>
+      <view class="content">
+          <block wx:for="{{objectArr}}" wx:for-index='myid' wx:for-item='myitem'>
+              <view class="content-part" id="{{myid}}" type="{{myid}}" bindtap="goNext">
+                  <image class="content-part-img" src="{{'../../images/content-part-' + myid + '.png' }}"></image>
+                  <view class="content-part-txt">{{myitem}}</view>
+              </view>
+          </block>
+      </view>
+  </view>
+
+  <view class='flex-wrp' bindtap='blockLid'>
+    <view class='flex-item flex-item-line'></view>
+    <view class='flex-item flex-item-text'>免责声明</view>
+    <view class='flex-item flex-item-line'></view>
+  </view>
+</scroll-view>
+
+<view class='lid' hidden='{{lidTip}}'></view>
+
+<view class='lid-content' hidden='{{contentTip}}'>
+  <view class='lid-tit'>{{lidTit}}</view>
+  <view class='lid-text'>{{lidText}}</view> 
+  <button class='lid-btn' bindtap='closeLid'>同意</button>
+</view>

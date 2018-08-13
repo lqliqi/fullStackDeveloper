@@ -1,0 +1,83 @@
+page {
+  background: #f6f6f6;
+}
+
+.wrap-mx {
+  width: 100%;
+  height: auto;
+  background-color: #f6f6f6;
+}
+
+.wrap-mx .list1 {
+  width: 100%;
+  background: white;
+}
+
+.wrap-mx .list1 > view {
+  border-bottom: 2rpx solid #f4f4f4;
+  width: 97%;
+  margin-left: 3%;
+  overflow: hidden;
+  padding: 2% 0;
+  color: #333;
+}
+
+.wrap-mx .list1 .title {
+  float: left;
+  color: #212121;
+  font-size: 30rpx;
+}
+
+.top-tab {
+  width: 100%;
+  height: 90rpx;
+  background: #fff;
+  color: #e73c0a;
+  font-size: 28rpx;
+  line-height: 90rpx;
+  z-index: 9999;
+  margin-top: 2rpx;
+}
+
+.toptab {
+  width: 50%;
+  float: left;
+  text-align: center;
+  color: #212121;
+  position: relative;
+}
+
+.toptab.active {
+  color: #e73c0a;
+  /* border-bottom: solid 2px #e73c0a; */
+}
+
+.toptab.active::after {
+  content: '';
+  width: 100rpx;
+  height: 4rpx;
+  background: #e73c0a;
+  position: absolute;
+  right: 50%;
+  margin-right: -50rpx;
+  bottom: 0rpx;
+}
+
+.wrap-mx .list1 .money {
+  float: right;
+  color: #212121;
+  font-size: 16px;
+  line-height: 40px;
+  margin-right: 3%;
+}
+
+.empty {
+  margin-top: 30%;
+  text-align: center;
+  font-size: 34rpx;
+}
+
+.empty image {
+  width: 356rpx;
+  height: 328rpx;
+}

@@ -1,0 +1,70 @@
+.wrap-cre {
+  background-color: #f6f6f6;
+  width: 100%;
+  height: auto;
+}
+
+.dp-info {
+  margin-top: 1%;
+  background: white;
+}
+
+.classify {
+  overflow: hidden;
+  width: 100%;
+}
+
+.wrap-cre .dp-info>.title {
+  width: 97%;
+  margin-left: 3%;
+  font-size: 24rpx;
+  line-height: 80rpx;
+  color: #393939;
+  border-bottom: 2rpx solid #f2f2f2;
+}
+
+.wrap-cre .dp-info .classify .title {
+  /* width: 97%; */
+  float: left;
+  margin-left: 3%;
+  font-size: 24rpx;
+  line-height: 80rpx;
+  color: #393939;
+}
+
+.wrap-cre .dp-info > view image {
+  transform: scale(0.8);
+  width: 20rpx;
+  height: 32rpx;
+  margin-top: 26rpx;
+  float: right;
+  margin-right: 3%;
+}
+
+.classify text {
+  float: right;
+  margin-right: 3%;
+  font-size: 24rpx;
+  color: #393939;
+  line-height: 80rpx;
+}
+
+.wrap-cre .type {
+  overflow: hidden;
+  background: white;
+  padding-bottom: 2%;
+  border-top: 2rpx solid #f6f6f6;
+  border-bottom: 2rpx solid #f6f6f6;
+}
+
+.wrap-cre .type > view {
+  width: 44%;
+  margin: 2% 3% 0;
+  text-align: center;
+  border-radius: 8rpx;
+  float: left;
+  font-size: 24rpx;
+  line-height: 60rpx;
+  background: #f6f6f6;
+  color: #c0c0c0;
+}

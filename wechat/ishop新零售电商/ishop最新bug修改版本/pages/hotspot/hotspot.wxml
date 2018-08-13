@@ -1,0 +1,29 @@
+<wxs module="util" src="../../utils/util.wxs" />
+<view class="content">
+  <loading hidden="{{hidden}}">
+    加载中...
+  </loading>
+  <view wx:for="{{hot_spot}}">
+    <view class='center'>
+      <view class='title'>
+        <view>
+          <navigator hover-class='none' url='../hotspot_detail_web/hotspot_detail_web?id={{item.id}}&title={{item.title}}'>
+            <!-- <view class='cir'></view> -->
+            <text class='title_name'>{{item.title}}</text>
+          </navigator>
+          <!-- <view class='cir'></view> -->
+        </view>
+        <!-- <text>{{item.create_time}}</text> -->
+        <view class='swiper-container'>
+          <view wx:for="{{item.goods}}">
+            <view class='swiper-slide'>
+              <navigator hover-class='none' url='../good_detail/good_detail?id={{item.id}}'>
+                <image src='{{util.HTTP + item.thumb_img}}'></image>
+              </navigator>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

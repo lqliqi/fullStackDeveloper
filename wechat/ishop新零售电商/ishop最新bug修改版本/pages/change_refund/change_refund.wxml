@@ -1,0 +1,40 @@
+<!-- <view class='tablist' hidden='true'>
+  <view class="{{currentTab == 1?'cur':''}}" bindtap='refundState'>申请退换货</view>
+  <view class="{{currentTab == 2?'cur':''}}" bindtap='recordState'>退换货记录</view>
+</view> -->
+
+<view class='tabcon'>
+  <view class='title'>退款类型
+  </view>
+  <view class='type'>
+    <view class="{{currentTab == 1?'cur':''}}">我要退款(无需退货)
+      <image src='/images/cur.png'></image>
+    </view>
+    <view class="{{currentTab == 2?'cur':''}}">我要退货
+      <image src='/images/cur.png'></image>
+    </view>
+  </view>
+</view>
+
+<view class='content'>
+  <view class='title'>退款原因</view>
+  <input placeholder='请输入退款原因' bindinput='causeInput'></input>
+  <view class='title'>退款金额</view>
+  <input placeholder='请输入退款金额' type='number' bindinput='amountInput'></input>
+  <view class='title'>退款说明</view>
+  <input placeholder='请输入退款说明' bindinput='explainInput'></input>
+  <view class='title'>上传凭证(最多三张)</view>
+  <view class='voucher'>
+    <view class='photo' wx:for="{{photos}}">
+      <image src='{{item}}'></image>
+      <image class='delete' src='/images/photo_delete.png' bindtap='delete' data-index='{{index}}'></image>
+    </view>
+    <view class='photo' bindtap='choose_photo' hidden='{{photos.length==3}}'>
+      <image src='/images/pl-tupian.png'></image>
+    </view>
+  </view>
+</view>
+
+<view class='commit' bindtap='commit'>
+  提交申请
+</view>

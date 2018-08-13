@@ -1,0 +1,172 @@
+<wxs module="util" src="../../utils/util.wxs" />
+<view class='head'>
+  <loading hidden="{{hidden}}">
+    加载中...
+  </loading>
+  <image src='/images/wdbj_01.png' class="my_head" style='width:100%'>
+    <!-- <image src='/images/my/sz.png' class="setting"></image> -->
+    <navigator hover-class='none' url='../message_list/message_list'>
+      <image src='/images/xiaoxi1.png' class="message"></image>
+    </navigator>
+  </image>
+  <view class='user_info'>
+    <view class='user_icon'>
+       <image wx:if="{{info.avatar.length==0}}" src='/images/ishop_logo.png' class='user_icon img'></image>
+      <image wx:else src='{{util.HTTP + info.avatar}}' class='user_icon img'></image> 
+    </view>
+    <view class='user_name'>
+      <view wx:if="{{info.nickname.length==0}}" class='title'>暂无昵称</view>
+      <view wx:else class='title'>{{info.nickname}}</view>
+      <view class='level'>
+        <image src='/images/my/v_03.png' class='v' />
+        <text>{{grade}}</text> {{info.level}}
+      </view>
+    </view>
+  </view>
+</view>
+<view class='per_con'>
+  <view class='order_item'>
+    <view class='order_item_list' bindtap='obligation'>
+      <view>
+        <image src="/images/my/dfk.png" class="icon" />
+        <text class='num' style="display:{{info.obligation==0?'none':'block'}}">{{info.obligation}}</text>
+      </view>
+      <text class="title">待付款</text>
+    </view>
+    <view class='order_item_list' bindtap='receiving'>
+      <view>
+        <image src="/images/my/dsh.png" class="icon" />
+        <text class='num' style="display:{{info.receiving==0?'none':'block'}}">{{info.receiving}}</text>
+      </view>
+      <text class="title">待收货</text>
+    </view>
+    <view class='order_item_list' bindtap='evaluate'>
+      <view>
+        <image src="/images/my/dpj.png" class="icon" />
+        <text class='num' style="display:{{info.evaluate==0?'none':'block'}}">{{info.evaluate}}</text>
+      </view>
+      <text class="title">待评价</text>
+    </view>
+    <view class='order_item_list' bindtap='refund'>
+      <view>
+        <image src="/images/my/thh.png" class="icon" />
+        <text class='num' style="display:{{info.exchange==0?'none':'block'}}">{{info.exchange}}</text>
+      </view>
+      <text class="title">退换货</text>
+    </view>
+    <view class='order_item_list' bindtap='all'>
+      <view>
+        <image src="/images/my/qbdd.png" class="icon" />
+      </view>
+      <text class="title">全部订单</text>
+    </view>
+  </view>
+  <view class='order_item'>
+    <view class='order_item_list' bindtap='commission'>
+      <view class="numcon">
+        <text class='number'>{{info.brokerge}}</text>
+      </view>
+      <text class="title">佣金</text>
+    </view>
+    <view class='order_item_list' bindtap='coupon'>
+      <view class="numcon">
+        <text class='number'>{{info.coupon}}</text>
+      </view>
+      <text class="title">优惠券</text>
+    </view>
+
+    <view class='order_item_list' bindtap='integral'>
+      <view class="numcon">
+        <text class='number'>{{info.integral}}</text>
+      </view>
+      <text class="title">积分</text>
+    </view>
+    <view class='order_item_list'>
+      <view class="numcon">
+        <text class='number'></text>
+      </view>
+
+    </view>
+    <!-- <view class='order_item_list' bindtap='redpocket'>
+      <view class="numcon">
+        <text class='number'>{{info.red}}</text>
+      </view>
+      <text class="title">红包</text>
+    </view> -->
+
+    <view class='order_item_list'>
+      <navigator hover-class='none' url='../my_wallet/my_wallet'>
+        <view>
+          <image src="/images/my/wdqb.png" class="icon" />
+        </view>
+        <text class="title">我的钱包</text>
+      </navigator>
+    </view>
+  </view>
+  <view class='list_item'>
+    <view bindtap='qr_scan'>
+      <image src='/images/my/wem.png'></image>
+      <text>我的二维码</text>
+    </view>
+    <view bindtap='distributor'>
+      <image src='/images/my/fxs.png'></image>
+      <text>分销商</text>
+    </view>
+    <view bindtap='distributors_orders'>
+      <image src='/images/my/fxdd.png'></image>
+      <text>分销订单</text>
+    </view>
+    <view bindtap='commission'>
+      <image src='/images/my/yj.png'></image>
+      <text>佣金</text>
+    </view>
+    <view bindtap='commission'>
+      <image src='/images/my/wdfx.png'></image>
+      <text>我的分销</text>
+    </view>
+  </view>
+  <view class='order_item ser_item'>
+    <navigator hover-class='none' url='../my_collect/my_collect?type_id=1'>
+      <view class='order_item_list'>
+        <view class='main'>{{info.collect_goods}}</view>
+        <text class='title'>收藏商品</text>
+      </view>
+    </navigator>
+    <navigator hover-class='none' url='../my_collect/my_collect?type_id=2'>
+      <view class='order_item_list'>
+        <view class='main'>{{info.collect_shop}}</view>
+        <text class='title'>收藏店铺</text>
+      </view>
+    </navigator>
+    <navigator hover-class='none' url='../member_browse_list/member_browse_list'>
+      <view class='order_item_list'>
+        <view class='main'>{{info.browse_record}}</view>
+        <text class='title'>浏览记录</text>
+      </view>
+    </navigator>
+    <navigator hover-class='none' url='../customer_service/customer_service'>
+      <view class='order_item_list'>
+        <view class='main'>
+          <image src='/images/my/kffw.png' style='width:36rpx;height:32rpx'></image>
+        </view>
+        <text class='title'>客户服务</text>
+      </view>
+    </navigator>
+  </view>
+  <view class='order_item ser_item'>
+    <view class='order_item_list' bindtap='auction'>
+      <image class='sundry_img' src='/images/my/pm.png'></image>
+      <text class='title'>我的拍卖</text>
+    </view>
+    <view class='order_item_list' bindtap='lotto'>
+      <image class='sundry_img' src='/images/my/cj.png'></image>
+      <text class='title'>我的抽奖</text>
+    </view>
+    <navigator hover-class='none' url='../manage_address/manage_address?isManage=true'>
+      <view class='order_item_list'>
+        <image class='sundry_img' src='/images/my/shdz.png'></image>
+        <text class='title'>收货地址</text>
+      </view>
+    </navigator>
+  </view>
+</view>

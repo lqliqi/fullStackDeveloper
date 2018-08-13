@@ -1,0 +1,84 @@
+page {
+  background: #f6f6f6;
+}
+
+.integral_title {
+  margin-top: 2rpx;
+  overflow: hidden;
+  width: 100%;
+  background: #fff;
+}
+
+.integral_title view {
+  float: left;
+  width: 33.3%;
+  text-align: center;
+}
+
+.active text {
+  color: #e73c0a !important;
+}
+
+.active text::after {
+  content: '';
+  width: 100%;
+  height: 4rpx;
+  background: #e73c0a;
+  position: absolute;
+  left: 0rpx;
+  bottom: 0rpx;
+}
+
+.integral_title view text {
+  display: inline-block;
+  font-size: 28rpx;
+  line-height: 80rpx;
+  color: #333;
+  text-align: center;
+  position: relative;
+}
+
+.integral_con {
+  background: #fff;
+  padding-left: 3%;
+}
+
+.integral_con .con {
+  border-bottom: 2rpx solid #f6f6f6;
+  overflow: hidden;
+  padding: 22rpx 0;
+}
+
+.integral_con .con .det {
+  float: left;
+}
+
+.integral_con .con .det .name {
+  font-size: 28rpx;
+  line-height: 36rpx;
+}
+
+.integral_con .con .det .date {
+  font-size: 24rpx;
+  line-height: 32rpx;
+  color: #666;
+}
+
+.integral_con .con .num {
+  float: right;
+  margin-right: 3%;
+  font-size: 34rpx;
+  line-height: 68rpx;
+  color: #e73f09;
+}
+
+.integral_con .con .num_reduce {
+  float: right;
+  margin-right: 3%;
+  font-size: 34rpx;
+  line-height: 68rpx;
+  color: #fece65;
+}
+.detail {
+  margin-top: 16rpx;
+}

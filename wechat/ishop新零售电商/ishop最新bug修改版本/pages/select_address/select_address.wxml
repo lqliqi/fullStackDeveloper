@@ -1,0 +1,15 @@
+<view>
+  <view class="cart_head">
+    <navigator hover-class='none' url='../manage_address/manage_address'>
+      <button class="ope">管理</button>
+    </navigator>
+  </view>
+
+  <view class='list'>
+    <view wx:for="{{address_list}}" bindtap='select' data-item='{{item}}'>
+      <view class='cur' hidden='{{item.status==2}}'>默认地址</view>
+      <text decode="{{true}}" space="{{true}}">{{item.name}}&nbsp;{{item.phone}}</text>
+      <text decode="{{true}}" space="{{true}}">{{item.area_info}}&nbsp;{{item.address}}</text>
+    </view>
+  </view>
+</view>

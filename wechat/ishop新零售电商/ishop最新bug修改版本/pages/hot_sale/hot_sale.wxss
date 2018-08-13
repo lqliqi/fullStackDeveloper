@@ -1,0 +1,38 @@
+page {
+  background: #f6f6f6;
+}
+
+.wrap-hot-sale {
+  width: 100%;
+  height: auto;
+}
+
+.wrap-hot-sale .center {
+  width: 100%;
+  height: auto;
+  background: white;
+}
+
+.wrap-hot-sale .center > view {
+  border-bottom: 1px solid #f9f9f9;
+}
+
+.wrap-hot-sale .center .title {
+  width: 94%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.wrap-hot-sale .center .title text {
+  display: block;
+  font-size: 28rpx;
+  line-height: 3;
+  float: left;
+}
+
+.wrap-hot-sale .center .title image {
+  float: right;
+  width: 30rpx;
+  height: 30rpx;
+  margin-top: 24rpx;
+}

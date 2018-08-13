@@ -1,0 +1,40 @@
+<view style='padding-bottom:80rpx;'>
+  <!-- <view class="cart_head">
+    <button class="ope" bindtap='add_address'>添加地址</button>
+  </view> -->
+
+  <view class='empty' hidden='{{address.length!=0}}'>
+    <image src='/images/empty_iv_5.png'></image>
+    <view>暂无收货地址</view>
+  </view>
+
+  <view class='center' wx:for="{{address}}" bindtap='select' data-item='{{item}}'>
+    <view class='name'>
+      {{item.name}}
+      <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text> {{item.phone}}
+    </view>
+    <view class='address'>
+      {{item.area_info}}
+      <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text> {{item.address}}
+    </view>
+    <view class='menu'>
+      <view class='default' catchtap='default' data-item='{{item}}'>
+        <image wx:if="{{item.status==1}}" src='/images/zffs_on.png'></image>
+        <image wx:else src='/images/zfsh_off.png'></image>
+        <text>设置为默认</text>
+      </view>
+      <view class='operate' data-item='{{item}}'>
+        <view catchtap='edit_address' data-item='{{item}}'>
+          <image src='/images/sh-binaji.png'></image>
+          <text>编辑</text>
+        </view>
+        <view catchtap='deleteAddress' data-item='{{item}}'>
+          <image src='/images/sh-shanchu.png'></image>
+          <text>删除</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='add_address' bindtap='add_address'>添加地址</view>

@@ -1,0 +1,65 @@
+<wxs module="util" src="../../utils/util.wxs" />
+<view class="top-tab">
+  <view class="toptab {{currentNavtab==idx ? 'active' : ''}}" wx:for="{{navTab}}" wx:for-index="idx" wx:for-item="itemName" data-idx="{{idx}}" bindtap="switchTab">
+    {{itemName}}
+  </view>
+</view>
+
+<view class='empty' hidden='{{list.length!=0}}'>
+  <image src='/images/empty_tv_order.png'></image>
+  <view>还没有相关订单呢</view>
+</view>
+
+
+<view class='list' wx:for="{{list}}" hidden='{{currentNavtab == 0}}'>
+  <view class='order_num'>订单编号:{{item.order_number}}</view>
+  <view class='good'>
+    <image src='{{util.HTTP + item.picUrl}}'></image>
+    <view>
+      <view class='title'>{{item.title}}</view>
+      <view class='pat_price' hidden='{{item.status != 3}}'>结拍价:
+        <text style='color:#e73c0a;'>¥{{item.price}}</text>
+      </view>
+      <view class='price' hidden='{{item.status == 3}}'>¥{{item.price}}</view>
+    </view>
+    <image class='jpcg' hidden='{{item.status != 3}}' src='/images/jpcg.png'></image>
+  </view>
+  <view class='info'>
+    <text class='price'>¥{{item.price}}</text>
+    <text> 共1件商品  实付: </text>
+  </view>
+  <view class='operation'>
+    <view class='cur' style="{{item.status == 2?'':'display:none'}}" bindtap='recieve' data-item='{{item}}' data-index='{{index}}'>确认收货</view>
+    <view class="{{item.status == 3?'cur':''}}" style="{{(item.status == 2) | (item.status == 3)?'':'display:none'}}" data-item='{{item}}' bindtap='logistics'>查看物流</view>
+    <view class='cur' style="{{item.status == 0?'':'display:none'}}" data-item='{{item}}' data-index='{{index}}' bindtap='pay'>付款</view>
+  </view>
+</view>
+
+
+<view class='pm_list' wx:for="{{list}}" hidden='{{currentNavtab != 0}}'>
+  <view class='good'>
+    <image src='{{util.HTTP + item.goods[0].picUrl}}'></image>
+    <view>
+      <view class='title'>{{item.goods.title}}</view>
+      <view class='price'>
+        <text class='dqjg'>当前价格:</text>
+        <text>¥{{item.max_price}}</text>
+      </view>
+      <view class='offer'>{{item.count}}人出价</view>
+      <view class='xuxian'></view>
+      <view class='end_time'>预计结拍时间:{{item.end_time}}</view>
+    </view>
+    <!-- <view> -->
+      <!-- <image src='/images/lx.png'></image> -->
+      <text  class='lx' hidden='{{item.ling != 1}}'>您正在领先</text>
+    <!-- </view> -->
+
+  </view>
+  <view class='info'>
+    <text class='price'>¥{{item.my_price==null?'0.00':item.my_price}}</text>
+    <text> 共1件商品  实付: </text>
+  </view>
+  <view class='operation'>
+    <view class='cur' data-item='{{item}}' data-index='{{index}}' bindtap='goAuction'>去竞拍</view>
+  </view>
+</view>

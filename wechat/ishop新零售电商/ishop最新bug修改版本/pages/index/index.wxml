@@ -1,0 +1,235 @@
+<wxs module="util" src="../../utils/util.wxs" />
+
+<view class='wrap'>
+  <view class='new_header'>
+    <view class='header_search'>
+      <view class='search'>
+        <view class='head'>
+          <!-- <image class='scan' src='/images/home_qr.png' bindtap='scanQR'></image> -->
+          <view>
+            <navigator hover-class='none' url='../search/search'>
+              <image src='/images/index/sousuo1.png'></image>
+              <input placeholder-style='color:white' type='text' disabled='disable' placeholder='请搜索关键字' id='keyword' maxlength='20' />
+            </navigator>
+          </view>
+          <navigator hover-class='none' url='../message_list/message_list'>
+            <image class='info' src='/images/index/xiaoxi1.png'></image>
+          </navigator>
+        </view>
+      </view>
+    </view>
+    <swiper class='swiper_' indicator-dots="true" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-active-color="#E03025" indicator-color="#bbbbbb" circular="true">
+      <block wx:for="{{banner_list}}">
+        <swiper-item>
+          <image src="{{util.HTTP + item.picUrl}}" class="slide-image" bindtap='banner' data-item='{{item}}' />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <swiper class='swiper_title' indicator-dots="{{indicatorDots}}" interval="{{interval}}" duration="{{duration}}" indicator-active-color="#E03025" indicator-color="#bbbbbb" display-multiple-items="1">
+    <block wx:for="{{title}}">
+      <swiper-item>
+        <view>
+          <view style='width:20%; float:left' wx:for="{{item}}" wx:for-index="idx" data-idx="{{idx}}" bindtap='enter' data-id='{{item.id}}'>
+            <view style='width:100%' class='my-view'>
+              <image src='{{item.url}}'></image>
+              <text>{{item.name}}</text>
+            </view>
+          </view>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+  <!--热点 -->
+  <view class='sale_title'>
+    <navigator hover-class='none' url='../hotspot/hotspot'>
+      <image src='/images/index/icon33.png' class='title_icon_hot left'></image>
+
+      <view class='news left'>
+        <swiper autoplay='true' interval="3000" duration="500" vertical='true' circular="true" style='height:50rpx;'>
+          <block wx:for="{{pro_list}}">
+            <swiper-item>
+              <text catchtap='hotspotDetail' data-item='{{item}}'>{{item.title}}</text>
+            </swiper-item>
+          </block>
+        </swiper>
+        <image src='/images/index/more.png' class='more_icon right'></image>
+      </view>
+    </navigator>
+  </view>
+  <!--限时秒杀  -->
+  <view class='index_sale'>
+    <navigator hover-class='none' url='../flash_sale/flash_sale'>
+      <view class='sale_title'>
+        <input hidden='true' bindblur='left' value='{{leftTime}}'></input>
+        <image class='title_icon' src='/images/index/i_icon13.png' bindtap=''></image>
+        <view class='time'>
+          {{clock}}
+          <!-- <block wx:if="{{d>=10}}">
+            <text>{{d}}</text>:</block>
+          <block wx:else>
+            <text>0{{d}}</text>:</block> -->
+          <block wx:if="{{h>=10}}">
+            <text>{{h}}</text>:</block>
+          <block wx:else>
+            <text>0{{h}}</text>:</block>
+          <block wx:if="{{m>=10}}">
+            <text>{{m}}</text>:</block>
+          <block wx:else>
+            <text>0{{m}}</text>:</block>
+          <block wx:if="{{s>=10}}">
+            <text>{{s}}</text>
+          </block>
+          <block wx:else>
+            <text>0{{s}}</text>
+          </block>
+        </view>
+        <image src='/images/index/more.png' class='more_icon right'></image>
+      </view>
+    </navigator>
+    <!-- <swiper interval="3000" class='swipe_hot_sales' display-multiple-items='4'>
+      <block wx:for="{{hot_sales}}">
+        <swiper-item class='hot_sales'>
+          <navigator hover-class='none' url='../good_detail/good_detail?id={{item.id}}&is_rush=1'>
+            <image src='{{util.HTTP + item.thumb_img}}'></image>
+            <text class='price'>¥{{item.price}}</text>
+            <text class='original'>¥{{item.old_price}}</text>
+          </navigator>
+        </swiper-item>
+      </block>
+    </swiper> -->
+    <scroll-view scroll-x style="height:250rpx">
+      <view style='overflow:auto;width:auto;white-space:nowrap;padding-right:20rpx;'>
+        <view wx:for="{{hot_sales}}" class='hot_sales'>
+          <navigator hover-class='none' url='../good_detail/good_detail?id={{item.id}}&is_rush=1'>
+            <image src='{{util.HTTP + item.thumb_img}}'></image>
+            <text class='price'>¥{{item.price}}</text>
+            <text class='original'>¥{{item.old_price}}</text>
+          </navigator>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <!--特价  -->
+  <view class='pic_index'>
+    <view class='pic1'>
+      <navigator hover-class='none' url='../special_price/special_price'>
+        <image mode='widthFix' src='https://app76.app.longcai.net/uploads/home_page/web_special_price_pic.png'>
+        </image>
+      </navigator>
+    </view>
+    <view class='pic2'>
+      <navigator hover-class='none' url='../hot_sale/hot_sale'>
+        <image class='l_pic' src='https://app76.app.longcai.net/uploads/home_page/web_hot_selling_pic.png'></image>
+      </navigator>
+      <navigator hover-class='none' url='../brands/brands'>
+        <image class='r_pic' src='https://app76.app.longcai.net/uploads/home_page/web_brand_street_pic.png'></image>
+      </navigator>
+    </view>
+  </view>
+  <!--热门市场  -->
+  <view class='sell_con'>
+    <navigator hover-class='none' url='../hot_market/hot_market'>
+      <view class='sale_title'>
+        <text class='i_tit'>热门市场</text>
+        <image src='/images/index/more.png' class='more_icon right'></image>
+      </view>
+    </navigator>
+    <view class='seller-menu'>
+      <image class='background' src='https://app76.app.longcai.net/static/mobile/img-wap/bg11.png'></image>
+      <view>
+        <navigator hover-class='none' url='../hot_market_detail/hot_market_detail?id={{hot_list[0].id}}&title={{hot_list[0].title}}'>
+          <image src='{{util.HTTP+hot_list[0].picUrl}}'></image>
+          <view class='title'>
+            <text class='name'>{{hot_list[0].title}}</text>
+            <text class='radius_title'>{{hot_list[0].title}}</text>
+          </view>
+        </navigator>
+      </view>
+      <view class='r'>
+        <navigator hover-class='none' url='../hot_market_detail/hot_market_detail?id={{hot_list[1].id}}&title={{hot_list[1].title}}'>
+          <image src='{{util.HTTP+ hot_list[1].picUrl}}'></image>
+          <view class='title'>
+            <text class='name'>{{hot_list[1].title}}</text>
+            <text class='radius_title'>{{hot_list[1].title}}</text>
+          </view>
+        </navigator>
+      </view>
+    </view>
+    <view class='seller-menu-more'>
+      <block wx:for="{{type_list}}">
+        <view>
+          <navigator hover-class='none' url='../hot_market_detail/hot_market_detail?id={{item.id}}&title={{item.title}}'>
+            <text>{{item.title}}</text>
+            <image src='{{util.HTTP + item.picUrl}}'></image>
+          </navigator>
+        </view>
+      </block>
+    </view>
+  </view>
+  <!--发现好店  -->
+  <view class='sell_con'>
+    <navigator hover-class='none' url='../find_shop/find_shop'>
+      <view class='sale_title'>
+        <text class='i_tit'>发现好店</text>
+        <image src='/images/index/more.png' class='more_icon right'></image>
+      </view>
+    </navigator>
+    <block wx:for="{{shop_list}}">
+      <view class='find_con'>
+        <navigator hover-class='none' url='../shop_details/shop_details?shop_id={{item.member_id}}'>
+          <view class='main'>
+            <image src='{{util.HTTP + item.banner}}'></image>
+            <view>
+              <text hidden='{{item.type!=1}}' class='self-support'>自营</text>
+              <view class='name'>{{item.title}}</view>
+            </view>
+          </view>
+        </navigator>
+        <swiper class='swiper-container' hidden='{{item.goods.length==0}}' display-multiple-items='4'>
+          <block wx:for="{{item.goods}}" wx:for-index="idx" wx:for-item="good">
+            <swiper-item>
+              <navigator hover-class='none' url="../good_detail/good_detail?id={{good.id}}">
+                <view class='good_shop_good'>
+                  <image src='{{util.HTTP + good.thumb_img}}'></image>
+                  <text class='title'>¥{{good.price}}</text>
+                </view>
+              </navigator>
+            </swiper-item>
+          </block>
+        </swiper>
+
+      </view>
+    </block>
+  </view>
+  <!--猜你喜欢  -->
+  <view class='sell_con'>
+    <view class='sale_title'>
+      <text class='i_tit'>猜你喜欢</text>
+    </view>
+    <view class='list_group'>
+      <block wx:for="{{like_list}}">
+        <view>
+          <navigator hover-class='none' url="../good_detail/good_detail?id={{item.id}}">
+            <view class='pic'>
+              <image mode='aspectFit' src='{{util.HTTP + item.thumb_img}}'></image>
+            </view>
+            <text class='title'>{{item.title}}</text>
+            <view class='price'>
+              <text class='yen'>¥{{item.price}}</text>
+              <text class='sale_num'>销量{{item.sale_number}}</text>
+            </view>
+          </navigator>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>
+
+<view class='sq' hidden='{{!sq}}'>
+  <view>
+    <view class='title'>温馨提示</view>
+    <view class='content'>为了您更好的用户体验,请前往授权页面授权</view>
+    <button hover-class='none' bindgetuserinfo='getUserInfo' open-type='getUserInfo'>授权</button>
+  </view>
+</view>

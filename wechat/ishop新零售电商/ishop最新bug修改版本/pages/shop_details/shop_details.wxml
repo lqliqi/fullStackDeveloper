@@ -1,0 +1,167 @@
+<wxs module="filters" src="tofix.wxs" />
+<wxs module="util" src="../../utils/util.wxs" />
+<view class="wrap-cre">
+  <loading hidden="{{hidden}}">
+    加载中...
+  </loading>
+  <toast hidden="toastHidden" duration="1000" bindchange="onToastChanged">
+    {{toastText}}
+  </toast>
+  <view style='padding-bottom:80rpx;'>
+    <!--搜索框  -->
+    <view class='header1'>
+      <view>
+        <input placeholder="请输入搜索关键字" maxlength="15" bindinput='keyInput'></input>
+        <view class='search' bindtap='search'>搜索</view>
+        <image src='/images/fl-sousuotubiao.png'></image>
+      </view>
+    </view>
+    <view class='center'>
+      <view class='info'>
+        <image class='pic1' src='{{util.HTTP + shop_data.data.banner}}'></image>
+        <view class='name'>
+          <view>
+            <text class='self-support' hidden="{{zy}}">自营</text> {{shop_data.data.title}}
+          </view>
+          <view>{{shop_data.data.description}}</view>
+        </view>
+        <view class='pic2'>
+          <image class='pic3' src='{{util.HTTP + shop_data.data.logo}}'>
+          </image>
+        </view>
+        <view class='collection' bindtap='collect'>
+          <image src="{{shop_data.collect_state.length==0?'/images/shop_sc_0.png':'/images/shop_sc_1.png'}}"></image>
+          <view>{{shop_data.data.collect_number}}人收藏</view>
+        </view>
+      </view>
+    </view>
+    <view class='main'>
+      <view class='list'>
+        <view class="{{currentTab==index?'cur':''}}" wx:for="{{list}}" data-idx='{{index}}' bindtap='switchTab'>
+          <text>{{item}}</text>
+        </view>
+      </view>
+      <view class='yhq1' hidden='{{!is_index}}'>
+        <view wx:for="{{index_data.data.coupon}}" bindtap="{{item.receive_status==2?'getcoupon':''}}" data-couponid='{{item.id}}'>
+          <image src="{{item.receive_status==2?'/images/dp-youhuiquan1.png':'/images/dp-guoqiyouhuiquan1.png'}}"></image>
+          <view class='dollar'>¥</view>
+          <view class='price'>{{filters.toFix(item.actual_price)}}</view>
+          <view class='use'>满{{filters.toFix(item.virtual_price)}}元可用</view>
+        </view>
+      </view>
+    </view>
+    <view class='banner' hidden='{{!is_index}}'>
+      <navigator hover-class='none' url='../good_detail/good_detail?id={{index_data.data.left_id}}'>
+        <view class='left_banner'>
+          <image src='{{util.HTTP + index_data.data.left_img}}'></image>
+        </view>
+      </navigator>
+      <view class='right_banner'>
+        <navigator hover-class='none' url='../good_detail/good_detail?id={{index_data.data.right_one_id}}'>
+          <image src='{{util.HTTP + index_data.data.right_img_one}}'></image>
+        </navigator>
+        <navigator hover-class='none' url='../good_detail/good_detail?id={{index_data.data.right_two_id}}'>
+          <image src='{{util.HTTP + index_data.data.right_img_two}}'></image>
+        </navigator>
+        <navigator hover-class='none' url='../good_detail/good_detail?id={{index_data.data.right_three_id}}'>
+          <image src='{{util.HTTP + index_data.data.right_img_three}}'></image>
+        </navigator>
+      </view>
+    </view>
+    <view class='like' hidden='{{!is_index}}'>
+      <view>
+        <image src='/images/my/zz-xian.png'></image>
+        超值单品
+      </view>
+    </view>
+    <!--促销tip  -->
+    <view class='tip' hidden='{{!is_promotion}}'>
+      <view>
+        <!-- <view class='cir'></view> -->
+        <view class='note'> 以下商品促销 </view>
+        <!-- <view class='cir'></view> -->
+      </view>
+    </view>
+    <!-- 全部商品下选项卡 -->
+    <view class='list_title' hidden='{{!is_all}}'>
+      <view class='list'>
+        <view class="title {{second_tab==1?'active':''}}" bindtap='multiple'>
+          <text class='word'>综合</text>
+        </view>
+        <view class="title {{second_tab==2?'active':''}}" bindtap='salenum'>
+          <text class='word'>销量</text>
+        </view>
+        <view class="title  {{second_tab==3?'active':''}}" bindtap='newgood'>
+          <text class='word'>新品</text>
+        </view>
+        <view class="title  {{second_tab==4?'active':''}}" bindtap='price'>
+          <text class='word'>价格</text>
+          <view>
+            <text class="caret up {{isprice==1?'change':''}}"></text>
+            <text class="caret {{isprice==2?'change': ''}}"></text>
+          </view>
+        </view>
+      </view>
+      <view class='choose' bindtap='change'>
+        <image src='{{double_img}}'></image>
+      </view>
+    </view>
+
+    <view class="cate_list_group {{!grid?'list_cate_group':''}}" hidden='{{is_new}}'>
+      <view class='cate_list' wx:for="{{goods_list}}">
+        <navigator hover-class='none' url='../good_detail/good_detail?id={{item.id}}'>
+          <view class='cate_pic'>
+            <image src='{{util.HTTP + item.thumb_img}}'></image>
+          </view>
+          <view class='cate_det'>
+            <view class='cate_title'>{{item.title}}</view>
+            <view class='ori_price'>
+              <view class='price'>
+                <text class='sign'>￥</text>
+                <text class='sign'>{{item.price}}</text>
+              </view>
+              <text class='inter_pri'>销量 {{item.sale_number}}</text>
+            </view>
+          </view>
+        </navigator>
+      </view>
+    </view>
+    <!--上新  -->
+    <view class="cate_list_group" hidden='{{!is_new}}'>
+      <view wx:for="{{new_goods_list}}">
+        <view class='date'>-{{item.date}}-</view>
+        <view class='cate_list' wx:for="{{item.list}}">
+          <navigator hover-class='none' url='../good_detail/good_detail?id={{item.id}}'>
+            <view class='cate_pic'>
+              <image src='{{util.HTTP + item.thumb_img}}'></image>
+            </view>
+            <view class='cate_det'>
+              <view class='cate_title'>{{item.title}}</view>
+              <view class='ori_price'>
+                <view class='price'>
+                  <text class='sign'>￥</text>
+                  <text class='sign'>{{item.price}}</text>
+                </view>
+                <text class='inter_pri'>销量 {{item.sale_number}}</text>
+              </view>
+            </view>
+          </navigator>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!--底部  -->
+  <view class='footer'>
+    <view>
+      <navigator hover-class='none' url='../shop_classify/shop_classify?shop_id={{shop_id}}'>
+        <view>商品分类</view>
+      </navigator>
+      <navigator hover-class='none' url='../shop_intro/shop_intro?shop_id={{shop_id}}'>
+        <view>店铺简介</view>
+      </navigator>
+      <navigator>
+        <view bindtap='callPhone'>联系卖家</view>
+      </navigator>
+    </view>
+  </view>
+</view>
