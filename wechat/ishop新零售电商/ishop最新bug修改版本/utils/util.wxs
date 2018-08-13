@@ -1,5 +1,0 @@
-var HTTP = 'https://app76.app.longcai.net/'
-
-module.exports = {
-  HTTP:HTTP
-}
