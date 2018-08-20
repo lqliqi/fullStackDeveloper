@@ -2,31 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa229ccc-37b7-4796-b122-e49d16257d4a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/6/1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/6/XMLTttpRequest.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/6/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7/笔记.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/8-1/ws/1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/8-1/ws/mysql.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/8-1/ws/server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/8-1/笔记.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/8/data/1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/8/http_errors/404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/8/node/fs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/8/node/server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/8/node/server2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/8/node/server3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/8/node/server4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/8/node/server5.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/8/www/1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/8/www/2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/8/异步.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/8/笔记.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node/1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node/server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node/笔记.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/9/node/server.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/9/node/url.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/9/node/www/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/9/node/www/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/9/node/笔记.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/6/笔记.txt" beforeDir="false" afterPath="$PROJECT_DIR$/6/笔记.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/8-1/笔记.txt" beforeDir="false" afterPath="$PROJECT_DIR$/8-1/笔记.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -43,29 +25,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="笔记.txt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/8-1/笔记.txt">
+      <file leaf-file-name="笔记.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/9/node/笔记.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="216" column="21" lean-forward="true" selection-start-line="216" selection-start-column="21" selection-end-line="216" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mysql.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/8-1/ws/mysql.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="553">
+              <caret line="272" selection-start-line="272" selection-end-line="272" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/8-1/ws/server.js">
+        <entry file="file://$PROJECT_DIR$/9/node/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+            <state relative-caret-position="391">
+              <caret line="65" column="37" lean-forward="true" selection-start-line="65" selection-start-column="37" selection-end-line="65" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="1.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/9/node/www/1.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -84,10 +66,12 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>Socket.IO v2.1.1</find>
+      <find>jquery</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/8-1/ws</dir>
       <dir>$PROJECT_DIR$/8-1</dir>
+      <dir>$PROJECT_DIR$</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -96,11 +80,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/2/2-10/Promise/es6.txt" />
-        <option value="$PROJECT_DIR$/2/2-11/generator.html" />
-        <option value="$PROJECT_DIR$/2/2-11/yield可以传参.html" />
-        <option value="$PROJECT_DIR$/2/2-11/yield可以返回.html" />
-        <option value="$PROJECT_DIR$/2/2-11/yield到底是个啥.html" />
         <option value="$PROJECT_DIR$/2/2-11/es6.txt" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/5/generator.html" />
@@ -147,6 +126,11 @@
         <option value="$PROJECT_DIR$/8-1/ws/1.html" />
         <option value="$PROJECT_DIR$/8-1/笔记.txt" />
         <option value="$PROJECT_DIR$/8-1/ws/mysql.js" />
+        <option value="$PROJECT_DIR$/9/node/笔记.txt" />
+        <option value="$PROJECT_DIR$/9/node/url.js" />
+        <option value="$PROJECT_DIR$/9/node/www/jquery.min.js" />
+        <option value="$PROJECT_DIR$/9/node/server.js" />
+        <option value="$PROJECT_DIR$/9/node/www/1.html" />
       </list>
     </option>
   </component>
@@ -166,6 +150,7 @@
     <handled-path value="$PROJECT_DIR$/3/node/node_modules" />
     <handled-path value="$PROJECT_DIR$/5/babel_es6/node_modules" />
     <handled-path value="$PROJECT_DIR$/8-1/ws/node_modules" />
+    <handled-path value="$PROJECT_DIR$/9/node/node_modules" />
     <handled-path value="$PROJECT_DIR$/node/node_modules" />
     <handled-path value="$PROJECT_DIR$/vue/dianshang/node_modules" />
     <handled-path value="$PROJECT_DIR$/vue/sell/node_modules" />
@@ -176,12 +161,13 @@
       <path value="$PROJECT_DIR$/3/node/package.json" />
       <path value="$PROJECT_DIR$/5/babel_es6/package.json" />
       <path value="$PROJECT_DIR$/8-1/ws/package.json" />
+      <path value="$PROJECT_DIR$/9/node/package.json" />
       <path value="$PROJECT_DIR$/node/package.json" />
       <path value="$PROJECT_DIR$/vue/dianshang/package.json" />
       <path value="$PROJECT_DIR$/vue/sell/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="width" value="1280" />
     <option name="height" value="751" />
   </component>
@@ -204,13 +190,13 @@
             <path>
               <item name="fullStackDeveloper" type="b2602c69:ProjectViewProjectNode" />
               <item name="fullStackDeveloper" type="462c0819:PsiDirectoryNode" />
-              <item name="8-1" type="462c0819:PsiDirectoryNode" />
+              <item name="9" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="fullStackDeveloper" type="b2602c69:ProjectViewProjectNode" />
               <item name="fullStackDeveloper" type="462c0819:PsiDirectoryNode" />
-              <item name="8-1" type="462c0819:PsiDirectoryNode" />
-              <item name="ws" type="462c0819:PsiDirectoryNode" />
+              <item name="9" type="462c0819:PsiDirectoryNode" />
+              <item name="node" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -230,19 +216,19 @@
     <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/9/node" />
+      <recent name="$PROJECT_DIR$/8-1" />
+      <recent name="$PROJECT_DIR$/8/www" />
+      <recent name="$PROJECT_DIR$/8/node" />
+      <recent name="$PROJECT_DIR$/8" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/5/babel_es6/js" />
       <recent name="$PROJECT_DIR$/5" />
       <recent name="$PROJECT_DIR$/5/js/seajs" />
       <recent name="$PROJECT_DIR$/2/2-10" />
       <recent name="$PROJECT_DIR$/2/Promise/js" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/8-1" />
-      <recent name="$PROJECT_DIR$/8/www" />
-      <recent name="$PROJECT_DIR$/8/node" />
-      <recent name="$PROJECT_DIR$/8" />
-      <recent name="$PROJECT_DIR$/node" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -296,12 +282,12 @@
       <workItem from="1534486770675" duration="532000" />
       <workItem from="1534661630646" duration="10583000" />
       <workItem from="1534686716898" duration="2232000" />
-      <workItem from="1534733717269" duration="4072000" />
+      <workItem from="1534733717269" duration="14567000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74121000" />
+    <option name="totallyTimeSpent" value="84616000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -313,17 +299,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="751" extended-state="6" />
+    <frame x="0" y="0" width="1280" height="731" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49919224" visible="true" weight="0.19936457" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32956383" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32956383" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" sideWeight="0.50080776" side_tool="true" weight="0.17871326" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3296" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3280507" />
       <window_info id="Favorites" order="2" sideWeight="0.50080776" side_tool="true" weight="0.17871326" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -332,7 +319,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -392,53 +378,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/5/seajs/1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/5/seajs/mod1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="15">
-            <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="33" />
-          </first_editor>
-          <second_editor>
-            <js_state />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/5/seajs/mod2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/5/seajs/a.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/5/seajs/2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/5/seajs/b.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -711,14 +650,59 @@
     <entry file="file://$PROJECT_DIR$/8-1/ws/mysql.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/9/node/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/8-1/笔记.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="216" column="21" lean-forward="true" selection-start-line="216" selection-start-column="21" selection-end-line="216" selection-end-column="21" />
+        <state relative-caret-position="846">
+          <caret line="221" lean-forward="true" selection-start-line="221" selection-end-line="253" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/9/node/笔记.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="553">
+          <caret line="272" selection-start-line="272" selection-end-line="272" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/9/node/url.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="17" lean-forward="true" selection-start-line="5" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/9/node/www/jquery.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="20233" selection-start-line="3" selection-start-column="20233" selection-end-line="3" selection-end-column="20233" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/9/node/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="65" column="37" lean-forward="true" selection-start-line="65" selection-start-column="37" selection-end-line="65" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/9/node/www/1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
         </state>
       </provider>
     </entry>

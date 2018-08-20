@@ -227,3 +227,27 @@ mysql
 
 ---------------------------------------------
 
+webSocket: 双向通信
+	socket.io 兼容
+node.js 服务器
+数据库：MySQL
+node操作数据库：
+1.mysql模块
+	mysql.createConnection
+	mysql.createPool
+
+2.SQL语言
+	4大基本语句--- 增删改查
+	增
+		INSERT INTO 表名 (字段列表) VALUES(值)
+		INSERT INTO user_table (username,password,online) VALUES('zhaoqi','777777',1);
+	删
+		DELETE FROM 表 WHERE 条件
+		DELETE FROM user_table WHERE ID=8
+	改
+		UPDATE 表 SET 字段=新值,字段=新值，... WHERE 条件
+		UPDATE user_table SET password='555555' WHERE ID=7
+	查
+		SELECT 字段列表 FROM 表 WHERE 条件
+		SELECT username,online FROM user_table WHERE ID=1;
+

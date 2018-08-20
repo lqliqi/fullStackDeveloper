@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户注册</title>
+</head>
+<body>
+    用户名：<input type="text" id="user"><br>
+    密码： <input type="password" id="pass"><br>
+    <button id="btn">注册</button>
+    <script src="jquery.min.js"></script>
+    <script>
+        var btn = document.getElementById('btn');
+        btn.onclick = function () {
+            $.ajax({
+                url: '/reg',
+                data: {
+                    user: $('#user').val(),
+                    pass: $('#pass').val()
+                },
+                dataType: 'json',
+                success(res){
+                    if(res.code){
+                        alert('注册失败: '+ res.msg);
+                    }else{
+                        alert('注册成功');
+                    }
+                },
+                error(err){
+                    // 通信失败
+                    alert('注册失败: '+ err);
+                }
+            });
+        };
+    </script>
+</body>
+</html>
