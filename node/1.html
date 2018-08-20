@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="http://localhost:8080/socket.io/socket.io.js"></script>
+<script>
+    let sock = io.connect('ws://localhost:8080');
+    // 1 浏览器发送请求
+   /* document.onclick = function(){
+        sock.emit('a',12,5);
+    }*/
+
+    // 4. 浏览器接收服务器的推送数据
+    sock.on('ttt',function (n) {
+        console.log(`接到了服务器发来的: ${n}`);
+    });
+</script>
+</body>
+</html>

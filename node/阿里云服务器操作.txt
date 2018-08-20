@@ -1,0 +1,82 @@
+用户名:  ssh root@39.108.8.214
+密码：   liqi8684010ECS
+
+远程连接密码： 931419
+
+
+查看系统盘 ：
+fdisk -l
+查看硬盘使用
+df -h
+退出命令行环境
+Control + d
+查看 zsh配置文件
+.zshrc
+重载用户环境变量
+source .zshrc
+添加用户
+adduser aliyun_manager / 123456
+清空命令面板
+command+r
+分配用户权限
+gpasswd -a aliyun_manager sudo
+
+sudo visudo
+
+查看 mac 根目录 ： pdw
+查看所有目录(包括隐藏文件) ： ll -a
+
+如果本地没有 .ssh 文件夹，通过命令
+ssh-keygen -t rsa -b 4096 -C "742538662@qq.com"
+
+生成公钥私钥后 开启 ssh 代理
+eval "$(ssh-agent -s)"
+
+将本地的 id_rsa 加入代理
+ssh-add ~/.ssh/id_rsa
+
+修改服务器 ssh 的  authorized_keys 的权限
+chmod 600 authorized_keys
+
+修改服务器配置文件
+sudo vi /etc/ssh/sshd_config
+
+更新服务器系统，进入服务器 输入
+sudo apt-get update && sudo apt-get upgrade
+
+清空iptables 的规则
+sudo iptables -F
+
+安装服务器所需依赖包
+sudo apt-get install vim open ssl build-essential libssl-dev wget curl git
+
+服务器上面安装 nvm
+wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+
+用 nvm 安装 node
+nvm install v6.9.5
+
+指定node 版本
+nvm use v6.9.5
+nvm alias default v6.9.5
+
+指定使用淘宝的源作为npm 的源
+npm install -g cnpm --registry=https://registry.npm.taobao.org
+
+增加系统文件监控数目
+echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+
+同步 sync koa 到 cnpm
+cnpm sync koa
+
+在服务器上安装前端依赖
+npm i pm2 webpack gulp grunt-cli -g
+
+防火墙配置文件
+sudo vi /etc/iptables.up.rules
+
+重载防火墙配置文件
+sudo iptables-restore < /etc/iptables.up.rules >
+
+重启服务
+service network restart

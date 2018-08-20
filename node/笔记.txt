@@ -1,0 +1,59 @@
+base 64 编码方式
+
+-----------------
+
+decorator-------- 装饰者模式
+对象生成之后，再给对象加东西
+-----------------------------------------
+
+websocket
+1.双工
+2.HTML5的
+3.用的非常广
+
+---------------------------------------
+
+库：socket.io
+socket.io 主要是跟node 配合使用，当然也可以和 php java 配合 ，和前台也可以用
+安装方式：node 文件目录下  npm install socket.io
+
+---------------------------------------
+
+浏览器  ------ > 服务器   http/https
+
+websocket 协议是基于http的
+-------------------------------------------
+
+sock.emit     发射
+sock.on       接收
+
+---------------------------------------------
+
+webSocket ---- socket.io
+
+1. 服务端
+	a. 先有http服务
+	let server = http.createServer();
+	server.listen(8080);
+
+	b. 再有个ws(webSocket)服务
+	let wsServer = io.listen(server);
+	wsServer.on('connect',function(){
+		sock
+	});
+2. 浏览器端
+	a. 引库
+	<script src="xxx/socket.io/socket.io.js"></script>
+
+	b.连接
+	let sock = io.connect('ws://xxx');
+
+---------------------------------------------
+
+sock.emit('名字',参数....)
+sock.on('名字',function(参数.....){});
+
+
+
+
+

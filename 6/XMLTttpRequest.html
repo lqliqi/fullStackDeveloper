@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="提交" id="btn1">
+<script>
+
+    window.onload = function () {
+        var btn1 = document.getElementById('btn1');
+        btn1.onclick = function () {
+
+
+            // 1. 创建对象
+            var xhr = new XMLHttpRequest();
+
+
+            // 2. 连接
+            xhr.open('GET','2.txt',true);
+
+
+            // 3. 发送
+            xhr.send();
+            // 4. 接收
+            xhr.onreadystatechange = function () {
+                if(xhr.readyState == 4){
+                    if(xhr.status >= 200 && xhr.status <= 300 || xhr.status == 304){
+                        alert('成功');
+                    }else {
+                        alert('失败');
+                    }
+                }
+            }
+
+
+        };
+    }
+
+</script>
+</body>
+</html>
